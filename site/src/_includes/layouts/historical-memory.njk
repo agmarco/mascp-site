@@ -1,0 +1,26 @@
+{% extends "layouts/base.njk" %}
+
+{% block content %}
+<main class="min-h-screen bg-white">
+  {% if heroImage %}
+    <div class="w-full h-96 bg-cover bg-center" style="background-image: url('{{ heroImage }}');">
+    </div>
+  {% endif %}
+
+  <article class="max-w-4xl mx-auto px-6 py-12">
+    <div class="prose prose-lg max-w-none text-gray-800">
+      {{ content | safe }}
+    </div>
+
+    <!-- Six images grid at bottom -->
+    <div class="mt-16 grid grid-cols-2 md:grid-cols-3 gap-6">
+      <img src="/assets/images/copy-of-fair-trade/e30e9f_bae25db76dd44f0e995ed48f8fe7a974_mv2.jpg" alt="" class="w-full h-auto object-cover rounded">
+      <img src="/assets/images/copy-of-fair-trade/e30e9f_e95c3ed77c6e497aa0a426ec03941cc5_mv2.jpg" alt="" class="w-full h-auto object-cover rounded">
+      <img src="/assets/images/copy-of-fair-trade/e30e9f_dab8145caa9c488ca2f0a595473e4931_mv2.jpg" alt="" class="w-full h-auto object-cover rounded">
+      <img src="/assets/images/copy-of-fair-trade/e30e9f_5d0909028dec4c768395b3cd33df612c_mv2.jpg" alt="" class="w-full h-auto object-cover rounded">
+      <img src="/assets/images/copy-of-fair-trade/e30e9f_3d2afe78657546e495a790a94fb63d87_mv2.png" alt="" class="w-full h-auto object-cover rounded">
+      <img src="/assets/images/copy-of-fair-trade/e30e9f_ad317ee0b8484cdb8d4a28b00d68ccf9_mv2.jpg" alt="" class="w-full h-auto object-cover rounded">
+    </div>
+  </article>
+</main>
+{% endblock %}
