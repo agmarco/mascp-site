@@ -1,9 +1,9 @@
 ---
 title: "Via Crucis"
-layout: layouts/page.njk
+layout: layouts/via-crucis.njk
 permalink: /via-crucis/
-heroImage: "/assets/images/copy-of-scholarships/e30e9f_ba14183ebebb4b2190560d550e1b91fc_mv2.jpg"
-description: "MASCP funds scholarships for university bound youth in Arcatao in hopes that this will give them skills to stay in their country and become future leaders."
+heroImage: "/assets/images/copy-of-scholarships/e30e9f_c61cdaccf1b74f469cdc34fe3c6b0d67_mv2.jpg"
+description: "Via Crucis - Stations of the Cross and Stations of the Struggle in Arcatao."
 ---
 
 ## Madison Arcatao Sister City Project
