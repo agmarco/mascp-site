@@ -1,0 +1,40 @@
+---
+layout: layouts/base.njk
+---
+
+{% if heroImage %}
+<section class="hero-section min-h-[350px] md:min-h-[450px]" style="background-image: url('{{ heroImage }}');">
+</section>
+{% endif %}
+
+<section class="bg-white py-12 md:py-16">
+  <div class="max-w-4xl mx-auto px-4 md:px-8">
+    <!-- Main Text -->
+    <div class="mb-8">
+      <h1 class="text-2xl md:text-3xl font-light text-mascp-dark mb-6 leading-tight">
+        YOUR DONATION CONTINUES MADISON'S 39 YEAR HISTORY OF SUPPORTING COMMUNITY ORGANIZING, HIGHER EDUCATION, HISTORICAL MEMORY AND SUSTAINABILITY IN ARCATAO
+      </h1>
+      <p class="text-xl font-light text-mascp-dark mb-8">¡MUCHÍSIMAS GRACIAS!</p>
+    </div>
+
+    <!-- Donate Button -->
+    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" class="mb-12">
+      <input type="hidden" name="cmd" value="_s-xclick">
+      <input type="hidden" name="hosted_button_id" value="6JJGZP9HK4T6Q">
+      <button type="submit" style="background-color: #5ba8b6; color: white; padding: 12px 32px; font-size: 18px; font-weight: 500; border: none; cursor: pointer; display: inline-block;">
+        Donate Now
+      </button>
+    </form>
+
+    <!-- Rest of Content -->
+    <article class="prose prose-lg max-w-none text-mascp-dark">
+      {{ content | safe }}
+    </article>
+  </div>
+</section>
+
+
+
+
+
+
