@@ -1,0 +1,92 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# For local development, uncomment below:
+# local_backend: true
+
+media_folder: "src/assets/images"
+public_folder: "/assets/images"
+
+collections:
+  # Main Pages
+  - name: "pages"
+    label: "Pages"
+    folder: "src/pages"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/page.njk" }
+      - { label: "Permalink", name: "permalink", widget: "string", required: false }
+      - { label: "Hero Image", name: "heroImage", widget: "image", required: false }
+      - { label: "Hero Title", name: "heroTitle", widget: "string", required: false, hint: "Override the page title shown on hero" }
+      - { label: "Description", name: "description", widget: "text", required: false }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  # Home Page (special)
+  - name: "home"
+    label: "Home Page"
+    files:
+      - name: "home"
+        label: "Home Page"
+        file: "src/index.md"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/home.njk" }
+          - { label: "Hero Image", name: "heroImage", widget: "image" }
+          - { label: "Welcome Text", name: "welcome", widget: "text" }
+          - { label: "Additional Content", name: "body", widget: "markdown", required: false }
+
+  # Events
+  - name: "events"
+    label: "Events"
+    folder: "src/events"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/page.njk" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Hero Image", name: "heroImage", widget: "image", required: false }
+      - { label: "Location", name: "location", widget: "string", required: false }
+      - { label: "Description", name: "description", widget: "text", required: false }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  # Site Settings
+  - name: "settings"
+    label: "Site Settings"
+    files:
+      - name: "navigation"
+        label: "Navigation"
+        file: "src/_data/navigation.json"
+        fields:
+          - name: "main"
+            label: "Main Navigation"
+            widget: "list"
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "URL", name: "url", widget: "string" }
+              - name: "children"
+                label: "Dropdown Items"
+                widget: "list"
+                required: false
+                fields:
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "URL", name: "url", widget: "string" }
+      - name: "social"
+        label: "Social Links"
+        file: "src/_data/social.json"
+        fields:
+          - { label: "Facebook URL", name: "facebook", widget: "string", required: false }
+          - { label: "YouTube URL", name: "youtube", widget: "string", required: false }
+          - { label: "Instagram URL", name: "instagram", widget: "string", required: false }
+      - name: "site"
+        label: "Site Settings"
+        file: "src/_data/site.json"
+        fields:
+          - { label: "Site Name", name: "name", widget: "string" }
+          - { label: "Site URL", name: "url", widget: "string" }
+          - { label: "Site Description", name: "description", widget: "text" }
+          - { label: "MailerLite Account ID", name: "mailerlite_account_id", widget: "string", hint: "Found in MailerLite under Integrations > API" }
+          - { label: "MailerLite Form ID", name: "mailerlite_form_id", widget: "string", hint: "Found when you create an embedded form" }

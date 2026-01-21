@@ -1,0 +1,34 @@
+---
+layout: layouts/base.njk
+---
+
+{% if heroImage %}
+<section class="hero-section min-h-[350px] md:min-h-[450px]" style="background-image: url('{{ heroImage }}');">
+</section>
+{% else %}
+<div class="bg-mascp-dark py-8">
+  <h1 class="text-3xl md:text-4xl font-heading text-center text-white">{{ title }}</h1>
+</div>
+{% endif %}
+
+<section class="bg-white">
+  <div class="max-w-6xl mx-auto px-4 md:px-8 pb-12">
+    <div class="flex flex-col md:flex-row gap-8">
+      <!-- Images Column - left side: narrow stacked images -->
+      <div class="md:w-2/5">
+        <div class="flex flex-col gap-6">
+          <img src="/assets/images/activities/e30e9f_5d88bb2b34484add82791843e59bafe9_mv2.png" alt="Delegation scene" style="width:68%;max-width:420px;height:240px;object-fit:cover;margin-right:auto;">
+          <img src="/assets/images/activities/e30e9f_bcd7e44a363e4176a1d380c52eff9ef4_mv2.jpg" alt="Delegation group" style="width:68%;max-width:420px;height:240px;object-fit:cover;margin-right:auto;">
+          <img src="/assets/images/activities/e30e9f_c52eaabebd8249f6a01bff54a39b4499_mv2.png" alt="Delegation visit" style="width:68%;max-width:420px;height:240px;object-fit:cover;margin-right:auto;">
+        </div>
+      </div>
+
+      <!-- Text Content - right side -->
+      <div class="md:w-3/5">
+        <article class="prose text-base md:text-lg leading-relaxed text-mascp-dark">
+          {{ content | safe }}
+        </article>
+      </div>
+    </div>
+  </div>
+</section>

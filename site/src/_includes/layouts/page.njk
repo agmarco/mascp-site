@@ -1,0 +1,16 @@
+---
+layout: layouts/base.njk
+---
+
+{% if heroImage %}
+<section class="hero-section min-h-[350px] md:min-h-[450px]" style="background-image: url('{{ heroImage }}');">
+</section>
+{% else %}
+<div class="bg-mascp-dark py-8">
+  <h1 class="text-3xl md:text-4xl font-heading text-center text-white">{{ title }}</h1>
+</div>
+{% endif %}
+
+<article class="prose max-w-4xl mx-auto px-4 md:px-8 py-8">
+  {{ content | safe }}
+</article>

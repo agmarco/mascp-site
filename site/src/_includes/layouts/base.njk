@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ title }} | Madison Arcatao Sister City Project</title>
+  <meta name="description" content="{{ description or 'Madison Arcatao Sister City Project - Building solidarity between Madison, WI and Arcatao, El Salvador since 1986.' }}">
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body class="min-h-screen flex flex-col">
+
+  <!-- Header -->
+  <header class="bg-white shadow-sm">
+    <!-- Decorative banner image -->
+    <div class="flex justify-center py-4">
+      <img src="/assets/images/header-banner.png" alt="MASCP banner" class="h-20 md:h-28 w-auto">
+    </div>
+
+    <!-- Site title and social -->
+    <div class="max-w-6xl mx-auto px-4 py-2 flex items-center justify-between">
+      <a href="/" class="text-xl md:text-2xl font-heading text-mascp-dark hover:text-mascp-terracotta text-center flex-grow">
+        Madison Arcatao Sister City Project
+      </a>
+      <div class="flex items-center gap-3">
+        {% if social.facebook %}
+        <a href="{{ social.facebook }}" target="_blank" rel="noopener" class="text-mascp-gray hover:text-mascp-terracotta" aria-label="Facebook">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.77,7.46H14.5v-1.9c0-.9.6-1.1,1-1.1h3V.5L14.17.5C10.24.5,9.5,3.44,9.5,5.32v2.15h-3v4h3v12h5v-12h3.85l.42-4Z"/></svg>
+        </a>
+        {% endif %}
+        {% if social.youtube %}
+        <a href="{{ social.youtube }}" target="_blank" rel="noopener" class="text-mascp-gray hover:text-mascp-terracotta" aria-label="YouTube">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M23.5,6.19a3.02,3.02,0,0,0-2.12-2.14C19.5,3.5,12,3.5,12,3.5s-7.5,0-9.38.55A3.02,3.02,0,0,0,.5,6.19,31.97,31.97,0,0,0,0,12a31.97,31.97,0,0,0,.5,5.81,3.02,3.02,0,0,0,2.12,2.14c1.88.55,9.38.55,9.38.55s7.5,0,9.38-.55a3.02,3.02,0,0,0,2.12-2.14A31.97,31.97,0,0,0,24,12,31.97,31.97,0,0,0,23.5,6.19ZM9.5,15.57V8.43L15.75,12Z"/></svg>
+        </a>
+        {% endif %}
+      </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="border-t border-gray-200">
+      <div class="max-w-6xl mx-auto px-4">
+        <ul class="flex flex-wrap items-center justify-center gap-1 py-2 text-sm md:text-base">
+          {% for item in navigation.main %}
+            {% if item.children %}
+            <li class="relative group">
+              <button class="nav-link flex items-center gap-1">
+                {{ item.label }}
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              </button>
+              <ul class="absolute left-0 top-full bg-white shadow-lg rounded-md py-2 min-w-[220px] hidden group-hover:block z-50">
+                {% for child in item.children %}
+                <li><a href="{{ child.url }}" class="block px-4 py-2 hover:bg-mascp-light">{{ child.label }}</a></li>
+                {% endfor %}
+              </ul>
+            </li>
+            {% elif item.label == "Donate" %}
+            <li><a href="{{ item.url }}" class="nav-link bg-mascp-terracotta text-white rounded {% if item.url in page.url %}bg-mascp-red{% endif %}">{{ item.label }}</a></li>
+            {% else %}
+            <li><a href="{{ item.url }}" class="nav-link {% if item.url == page.url or (item.url != '/' and item.url in page.url) %}active{% endif %}">{{ item.label }}</a></li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main content -->
+  <main class="flex-grow">
+    {{ content | safe }}
+  </main>
+
+  <!-- Newsletter signup -->
+  <section class="border-t border-gray-300">
+    <!-- Gray header with text -->
+    <div class="bg-mascp-light py-8 px-4">
+      <div class="max-w-5xl mx-auto">
+        <p class="text-xl md:text-2xl font-heading text-mascp-dark">
+          Join our mailing list&nbsp;&nbsp;Never miss an update
+        </p>
+      </div>
+    </div>
+    <!-- White form section -->
+    <div class="bg-white py-8 px-4">
+      <div class="max-w-5xl mx-auto">
+        <form action="https://assets.mailerlite.com/jsonp/{{ site.mailerlite_account_id or 'ACCOUNT_ID' }}/forms/{{ site.mailerlite_form_id or 'FORM_ID' }}/subscribe" method="post" class="flex flex-col md:flex-row md:items-end gap-6 md:gap-8">
+          <div class="flex-1">
+            <label for="newsletter-name" class="sr-only">Name</label>
+            <input type="text" id="newsletter-name" name="fields[name]" placeholder="Name" class="w-full border-0 border-b border-mascp-gray bg-transparent py-2 text-mascp-dark placeholder-mascp-gray focus:outline-none focus:border-mascp-terracotta">
+          </div>
+          <div class="flex-1">
+            <label for="newsletter-email" class="sr-only">Email Address</label>
+            <input type="email" id="newsletter-email" name="fields[email]" placeholder="Email Address" required class="w-full border-0 border-b border-mascp-gray bg-transparent py-2 text-mascp-dark placeholder-mascp-gray focus:outline-none focus:border-mascp-terracotta">
+          </div>
+          <div class="md:flex-shrink-0">
+            <button type="submit" class="w-full md:w-auto bg-mascp-dark text-white px-8 py-3 hover:bg-mascp-gray transition-colors">
+              Subscribe Now
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-mascp-dark text-white py-6">
+    <div class="max-w-6xl mx-auto px-4 text-center text-sm">
+      <p>&copy; 2024 Madison Arcatao Sister City Project</p>
+    </div>
+  </footer>
+
+</body>
+</html>

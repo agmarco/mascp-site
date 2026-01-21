@@ -1,0 +1,33 @@
+---
+layout: layouts/base.njk
+---
+
+<!-- Featured Image/Flyer -->
+{% if heroImage %}
+<section class="py-8 bg-white">
+  <div class="max-w-3xl mx-auto px-4">
+    <img src="{{ heroImage }}" alt="Visit Arcatao - Madison's Sister City in El Salvador" class="w-full h-auto rounded-lg shadow-lg">
+  </div>
+</section>
+{% endif %}
+
+<!-- Welcome Section -->
+<section class="content-section text-center">
+  <h2 class="text-3xl md:text-4xl font-heading text-mascp-dark mb-6">Madison Arcatao Sister City Project</h2>
+  <p class="text-lg text-mascp-gray max-w-3xl mx-auto leading-relaxed">
+    {{ welcome | safe }}
+  </p>
+  <a href="/contact/" class="btn-primary inline-block mt-8">Contact Us For More Info</a>
+</section>
+
+<!-- Additional content -->
+{{ content | safe }}
+
+<!-- Call to Action -->
+<section class="bg-mascp-light py-16">
+  <div class="max-w-4xl mx-auto px-4 text-center">
+    <h3 class="text-2xl font-heading mb-4">Support Our Work</h3>
+    <p class="text-mascp-gray mb-6">Your donation helps us continue building solidarity between Madison and Arcatao.</p>
+    <a href="/donate/" class="btn-primary inline-block">Donate Now</a>
+  </div>
+</section>

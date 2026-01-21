@@ -1,0 +1,68 @@
+---
+layout: layouts/base.njk
+---
+
+<!-- Hero Image - Taller, no overlay -->
+{% if heroImage %}
+<section class="hero-section min-h-[450px] md:min-h-[550px]" style="background-image: url('{{ heroImage }}');">
+</section>
+{% endif %}
+
+<!-- OUR MISSION - Gray background with image on LEFT -->
+<section class="bg-mascp-light">
+  <div class="max-w-5xl mx-auto px-4 md:px-8 py-12">
+    <div class="md:flex md:gap-8 items-start">
+      <div class="md:w-2/5 mb-6 md:mb-0">
+        {% if sectionImage %}
+        <img src="{{ sectionImage }}" alt="Community gathering in Arcatao" class="rounded-lg shadow-md w-full">
+        {% endif %}
+      </div>
+      <div class="md:w-3/5">
+        <h2 class="text-2xl md:text-3xl font-heading text-mascp-dark mb-6">OUR MISSION</h2>
+        <p class="text-base md:text-lg leading-relaxed text-mascp-dark">
+          The Madison Arcatao Sister City Project as part of the U.S.-El Salvador Sister Cities (USESSC) network works for social change by building and defending sustainable communities and economies based on solidarity, dignity, and self-determination. Our work is driven by mutual community accompaniment, organizing, education, advocacy and fundraising.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT MASCP - White background -->
+<section class="bg-white">
+  <div class="max-w-4xl mx-auto px-4 md:px-8 py-12">
+    <h2 class="text-2xl md:text-3xl font-heading text-mascp-dark mb-6">ABOUT MASCP</h2>
+    <p class="text-base md:text-lg leading-relaxed text-mascp-dark mb-4">
+      MASCP is a not-for-profit volunteer organization established in 1986 when Madison's Common Council named Arcatao its first official sister city. MASCP has a board of 6-8 members who provide basic leadership for the organization. There is a community of 250+ Friends of MASCP who participate financially and volunteer on an as-needed basis as the group's activities require.
+    </p>
+    <p class="text-base md:text-lg leading-relaxed text-mascp-dark mb-4">
+      Through the work of MASCP, the people in Madison and Arcatao nurture friendships that energize them to work for social and economic justice at home and beyond the boundaries of their own countries.
+    </p>
+    <p class="text-base md:text-lg leading-relaxed text-mascp-dark">
+      MASCP also contributes to the organizing work of US El Salvador Sister Cities (USESSC)–a nation-wide organization that joins all 17 US El Salvador sister cities in efforts for friendship, understanding, and positive change both north and south.
+    </p>
+  </div>
+</section>
+
+<!-- ABOUT OUR NETWORK - Gray background full width -->
+<section class="bg-mascp-light">
+  <div class="max-w-4xl mx-auto px-4 md:px-8 py-12">
+    <h2 class="text-2xl md:text-3xl font-heading text-mascp-dark mb-6">ABOUT OUR NETWORK</h2>
+    <p class="text-base md:text-lg leading-relaxed text-mascp-dark mb-4">
+      The U.S.-El Salvador Sister Cities Network is a grass-roots network of U.S. citizens and residents who have formed ongoing partnerships with rural communities in El Salvador through The Association of Rural Communities for Development in El Salvador (CRIPDES). Our sistering began in 1986 in response to US intervention in El Salvador's Civil War (1980-1992) and continues today to form grass-root coalitions to work for structural change in the US and in El Salvador.
+    </p>
+    <p class="text-base md:text-lg leading-relaxed text-mascp-dark mb-4">
+      Our network is formed by these U.S. Committees working in solidarity with their organized Sister Communities in El Salvador as well as by Three National Working Groups: Migration, Environment and Climate Change, Historical Memory and U.S. Intervention.
+    </p>
+    <p class="text-base md:text-lg leading-relaxed text-mascp-dark mb-4">
+      We use the following strategies in our work for social change:
+    </p>
+    <ol class="list-decimal pl-6 text-base md:text-lg leading-relaxed text-mascp-dark mb-6">
+      <li class="mb-2">Strengthen relationships</li>
+      <li class="mb-2">Educate and raise awareness</li>
+      <li class="mb-2">Advocate with US lawmakers</li>
+      <li class="mb-2">Work in coalition with larger social movements</li>
+      <li class="mb-2">Share economic and human resources</li>
+    </ol>
+    <a href="https://uselsalvadorsistercities.org/" target="_blank" rel="noopener" class="btn-primary inline-block">Learn More About USESSC</a>
+  </div>
+</section>

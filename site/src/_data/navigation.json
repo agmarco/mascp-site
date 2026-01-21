@@ -1,0 +1,23 @@
+{
+  "main": [
+    { "label": "Home", "url": "/" },
+    { "label": "About", "url": "/about/" },
+    { "label": "History", "url": "/history/" },
+    {
+      "label": "Our Work",
+      "url": "#",
+      "children": [
+        { "label": "Fair Trade/Chalate Arts", "url": "/fair-trade/" },
+        { "label": "Scholarships", "url": "/scholarships/" },
+        { "label": "Delegations", "url": "/delegations/" },
+        { "label": "Preserving Historical Memory", "url": "/historical-memory/" },
+        { "label": "Via Crucis", "url": "/via-crucis/" },
+        { "label": "Sister City Collaboration", "url": "/sister-city-collaboration/" }
+      ]
+    },
+    { "label": "Get Involved", "url": "/get-involved/" },
+    { "label": "Resources", "url": "/resources/" },
+    { "label": "Contact Us", "url": "/contact/" },
+    { "label": "Donate", "url": "/donate/" }
+  ]
+}
