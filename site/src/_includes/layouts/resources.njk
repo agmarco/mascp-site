@@ -1,0 +1,34 @@
+---
+layout: layouts/base.njk
+---
+
+{% if heroImage %}
+<section class="hero-section min-h-[350px] md:min-h-[450px]" style="background-image: url('{{ heroImage }}');">
+</section>
+{% else %}
+<div class="bg-mascp-dark py-8">
+  <h1 class="text-3xl md:text-4xl font-heading text-center text-white">{{ title }}</h1>
+</div>
+{% endif %}
+
+<!-- Main Content with Images Grid -->
+<section class="bg-white">
+  <div class="max-w-6xl mx-auto px-4 md:px-8 pb-12">
+    <div class="flex flex-col md:flex-row gap-8">
+      <!-- Text Content - left side (wider) -->
+      <div class="md:w-3/5">
+        <article class="prose text-base md:text-lg leading-relaxed text-mascp-dark">
+          {{ content | safe }}
+        </article>
+      </div>
+
+      <!-- Images Column - right side: narrow images stacked and aligned right -->
+      <div class="md:w-2/5">
+        <div class="flex flex-col gap-6">
+          <img src="/assets/images/resources/e30e9f_ce74c2d4f94d4d0794c2a485b47a9740_mv2.jpeg" alt="Resources" style="width:100%;max-width:420px;height:auto;margin-left:auto;object-fit:contain;display:block;">
+          <img src="/assets/images/resources/e30e9f_b3539e2eba054ffea2d536bdddccf810_mv2.jpeg" alt="Resources" style="width:100%;max-width:420px;height:auto;margin-left:auto;object-fit:contain;display:block;">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
