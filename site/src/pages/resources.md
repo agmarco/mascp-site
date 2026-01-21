@@ -49,7 +49,7 @@ Mary Kay Baum delivering the official Madison Common Council resolution to Maria
     <img src="/assets/images/resources/e30e9f_177fd4407a594d52b1706c24e9bedd7e_mv2.png" style="width: 80px; height: auto;">
   </a>
   <div>
-    <strong>U.S. El Salvador Sister Cities</strong> - National organization, founded in 1986, organizing US communities sistered with Salvadoran communities. Partners with CRIPDES in El Salvador, a national organization for the development of El Salvador.
+  <strong>U.S. El Salvador Sister Cities</strong> - National organization, founded in 1986, organizing US communities sistered with Salvadoran communities. Partners with CRIPDES in El Salvador, a national organization for the development of El Salvador.
   </div>
 </div>
 
