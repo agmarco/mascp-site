@@ -1,0 +1,34 @@
+---
+layout: layouts/base.njk
+---
+
+{% if heroImage %}
+<section class="hero-section min-h-[350px] md:min-h-[450px]" style="background-image: url('{{ heroImage }}');">
+</section>
+{% else %}
+<div class="bg-mascp-dark py-8">
+  <h1 class="text-3xl md:text-4xl font-heading text-center text-white">{{ title }}</h1>
+</div>
+{% endif %}
+
+<!-- Main Content with Images Grid -->
+<section class="bg-white">
+  <div class="max-w-6xl mx-auto px-4 md:px-8 pb-12">
+    <div class="flex flex-col md:flex-row gap-8">
+      <!-- Text Content - left side (wider) -->
+      <div class="md:w-3/5">
+        <article class="prose text-base md:text-lg leading-relaxed text-mascp-dark">
+          {{ content | safe }}
+        </article>
+      </div>
+
+      <!-- Images Column - right side: narrow images stacked and aligned right -->
+      <div class="md:w-2/5">
+        <div class="flex flex-col gap-6">
+          <img src="/assets/images/copy-of-anti-mining/e30e9f_2f1b1b496d71449e9b8e4a822354b19f_mv2.jpg" alt="Sister City Collaboration" style="width:100%;max-width:420px;height:auto;margin-left:auto;object-fit:contain;display:block;">
+          <img src="/assets/images/copy-of-anti-mining/e30e9f_8db2880529a74386970c06411cfb71e1_mv2.jpg" alt="Sister City Collaboration" style="width:100%;max-width:420px;height:auto;margin-left:auto;object-fit:contain;display:block;">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
