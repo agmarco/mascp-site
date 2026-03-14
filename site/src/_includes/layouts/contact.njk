@@ -24,7 +24,7 @@ layout: layouts/base.njk
 
       <!-- Right Side - Contact Form -->
       <div class="md:w-3/5">
-        <form id="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="space-y-6">
+        <form id="contact-form" name="contact" method="POST" netlify netlify-honeypot="bot-field" class="space-y-6">
           <input type="hidden" name="form-name" value="contact">
           <p class="hidden"><input name="bot-field"></p>
 
@@ -55,10 +55,11 @@ layout: layouts/base.njk
           document.getElementById('contact-form').addEventListener('submit', function(e) {
             e.preventDefault();
             var form = this;
-            fetch('/', {
+            fetch('/contact/', {
               method: 'POST',
               headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-              body: new URLSearchParams(new FormData(form)).toString()
+              body: new URLSearchParams(new FormData(form)).toString(),
+              credentials: 'same-origin'
             }).then(function() {
               form.classList.add('hidden');
               document.getElementById('contact-success').classList.remove('hidden');
