@@ -6,6 +6,7 @@
   <title>{{ title }} | Madison Arcatao Sister City Project</title>
   <meta name="description" content="{{ description or 'Madison Arcatao Sister City Project - Building solidarity between Madison, WI and Arcatao, El Salvador since 1986.' }}">
   <link rel="stylesheet" href="/assets/css/style.css">
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body class="min-h-screen flex flex-col">
 
@@ -107,5 +108,16 @@
     </div>
   </footer>
 
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", user => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
+  </script>
 </body>
 </html>
