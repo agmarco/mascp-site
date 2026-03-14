@@ -82,7 +82,7 @@
     <!-- White form section -->
     <div class="bg-white py-8 px-4">
       <div class="max-w-5xl mx-auto">
-        <form action="https://assets.mailerlite.com/jsonp/{{ site.mailerlite_account_id or 'ACCOUNT_ID' }}/forms/{{ site.mailerlite_form_id or 'FORM_ID' }}/subscribe" method="post" class="flex flex-col md:flex-row md:items-end gap-6 md:gap-8">
+        <form id="newsletter-form" action="https://assets.mailerlite.com/jsonp/{{ site.mailerlite_account_id or 'ACCOUNT_ID' }}/forms/{{ site.mailerlite_form_id or 'FORM_ID' }}/subscribe" method="post" class="flex flex-col md:flex-row md:items-end gap-6 md:gap-8">
           <div class="flex-1">
             <label for="newsletter-name" class="sr-only">Name</label>
             <input type="text" id="newsletter-name" name="fields[name]" placeholder="Name" class="w-full border-0 border-b border-mascp-gray bg-transparent py-2 text-mascp-dark placeholder-mascp-gray focus:outline-none focus:border-mascp-terracotta">
@@ -100,6 +100,31 @@
       </div>
     </div>
   </section>
+
+  <!-- Toast notification -->
+  <div id="newsletter-toast" class="fixed bottom-6 left-1/2 -translate-x-1/2 bg-mascp-dark text-white px-6 py-3 rounded shadow-lg text-sm transition-opacity duration-300 opacity-0 pointer-events-none z-50">
+    Thank you for subscribing!
+  </div>
+
+  <script>
+    document.getElementById('newsletter-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      var form = this;
+      var data = new FormData(form);
+      data.append('ml-submit', '1');
+      fetch(form.action, { method: 'POST', body: data })
+        .then(function() {
+          form.reset();
+          var toast = document.getElementById('newsletter-toast');
+          toast.classList.remove('opacity-0');
+          toast.classList.add('opacity-100');
+          setTimeout(function() {
+            toast.classList.remove('opacity-100');
+            toast.classList.add('opacity-0');
+          }, 3000);
+        });
+    });
+  </script>
 
   <!-- Footer -->
   <footer class="bg-mascp-dark text-white py-6">
