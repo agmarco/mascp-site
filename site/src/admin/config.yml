@@ -5,14 +5,14 @@ backend:
 # For local development, uncomment below:
 # local_backend: true
 
-media_folder: "src/assets/images"
+media_folder: "site/src/assets/images"
 public_folder: "/assets/images"
 
 collections:
   # Main Pages
   - name: "pages"
     label: "Pages"
-    folder: "src/pages"
+    folder: "site/src/pages"
     create: true
     slug: "{{slug}}"
     fields:
@@ -30,7 +30,7 @@ collections:
     files:
       - name: "home"
         label: "Home Page"
-        file: "src/index.md"
+        file: "site/src/index.md"
         fields:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/home.njk" }
@@ -41,7 +41,7 @@ collections:
   # Events
   - name: "events"
     label: "Events"
-    folder: "src/events"
+    folder: "site/src/events"
     create: true
     slug: "{{slug}}"
     fields:
@@ -59,7 +59,7 @@ collections:
     files:
       - name: "navigation"
         label: "Navigation"
-        file: "src/_data/navigation.json"
+        file: "site/src/_data/navigation.json"
         fields:
           - name: "main"
             label: "Main Navigation"
@@ -76,14 +76,14 @@ collections:
                   - { label: "URL", name: "url", widget: "string" }
       - name: "social"
         label: "Social Links"
-        file: "src/_data/social.json"
+        file: "site/src/_data/social.json"
         fields:
           - { label: "Facebook URL", name: "facebook", widget: "string", required: false }
           - { label: "YouTube URL", name: "youtube", widget: "string", required: false }
           - { label: "Instagram URL", name: "instagram", widget: "string", required: false }
       - name: "site"
         label: "Site Settings"
-        file: "src/_data/site.json"
+        file: "site/src/_data/site.json"
         fields:
           - { label: "Site Name", name: "name", widget: "string" }
           - { label: "Site URL", name: "url", widget: "string" }
