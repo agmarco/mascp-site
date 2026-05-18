@@ -34,6 +34,17 @@ people in El Salvador.
 
 ## Our Newest Scholarship Recipients
 
-### Meet José
-
-### Meet Saúl
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 my-8">
+  <div class="text-center">
+    <div class="aspect-video mb-3">
+      <iframe width="100%" height="100%" src="https://www.youtube.com/embed/JVcG60xhHHg" title="Arcatao Scholarship Student - Jose" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <p class="font-heading text-xl text-mascp-dark">Meet José</p>
+  </div>
+  <div class="text-center">
+    <div class="aspect-video mb-3">
+      <iframe width="100%" height="100%" src="https://www.youtube.com/embed/Kk74q3_7CSo" title="Arcatao Scholarship Student - Saúl" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <p class="font-heading text-xl text-mascp-dark">Meet Saúl</p>
+  </div>
+</div>
