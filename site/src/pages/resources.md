@@ -127,4 +127,4 @@ A Documentary Portrait of Love and Survival in El Salvador's Civil War.
 
 ## NEWSLETTER ARCHIVE
 
-[See past MASCP newsletters](https://www.mascp.org/newsletter-archive)
+[See past MASCP newsletters](/newsletter-archive/)

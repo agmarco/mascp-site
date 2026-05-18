@@ -1,0 +1,28 @@
+# Wix URL → Netlify URL redirects
+/about-1                    /about/                     301
+/history                    /history/                   301
+/activities                 /delegations/               301
+/scholarships               /scholarships/              301
+/anti-mining                /anti-mining/               301
+/fair-trade-1               /fair-trade/                301
+/get-involved-1             /get-involved/              301
+/donate-1                   /donate/                    301
+/contact-us-1               /contact/                   301
+/resources-1                /resources/                 301
+/newsletter-archive         /newsletter-archive/        301
+/upcoming-events            /upcoming-events/           301
+/celebrations               /celebrations/              301
+/copy-of-scholarships       /via-crucis/                301
+/copy-of-anti-mining        /sister-city-collaboration/ 301
+/copy-of-fair-trade         /historical-memory/         301
+/copy-of-our-work           /fair-trade/                301
+/copy-of-delegations        /delegations/               301
+/event-list                 /events/event-list/         301
+
+# Event detail pages
+/event-details/community-organizing-that-leads-to-national-change                                                                          /events/event-community-organizing/  301
+/event-details/8-oclock-buzz-interview-with-cintia-and-zulma                                                                               /events/event-8oclock-buzz/          301
+/event-details/mascps-annual-pupusa-dinner-and-fundraiser                                                                                   /events/event-pupusa-dinner/         301
+/event-details/social-mobilization-around-environmental-issues                                                                              /events/event-social-mobilization/   301
+/event-details/the-essential-role-of-community-organizing-in-national-change                                                               /events/event-essential-organizing/  301
+/event-details/water-is-life-stories-of-grassroots-environmental-activism-in-el-salvador-and-the-united-states                            /events/event-water-is-life/         301
