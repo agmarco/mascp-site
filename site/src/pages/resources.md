@@ -109,8 +109,21 @@ Mary Kay Baum delivering the official Madison Common Council resolution to Maria
 
 ## VIDEOS
 
-- El Pasado No Es Historia: Memorias de Guerra y Revolución en Chalatenango, El Salvador (Film is in Spanish)
-- A Documentary Portrait of Love and Survival in El Salvador's Civil War
+**EL PASADO NO ES HISTORIA**
+
+Memorias de Guerra y Revolución en Chalatenango, El Salvador. Film is in Spanish.
+
+<div class="aspect-video my-4">
+  <iframe width="100%" height="100%" src="https://player.vimeo.com/video/133053653" title="El Pasado No Es Historia" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+**MARIA'S STORY**
+
+A Documentary Portrait of Love and Survival in El Salvador's Civil War.
+
+<div class="aspect-video my-4">
+  <iframe width="100%" height="100%" src="https://player.vimeo.com/video/410830490" title="Maria's Story" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ## NEWSLETTER ARCHIVE
 
