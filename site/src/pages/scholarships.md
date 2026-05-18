@@ -31,3 +31,9 @@ Washington. We meet with them regularly to discuss the
 consequences of US foreign policies in Central America and how
 our policies can be changed to improve the lives of working
 people in El Salvador.
+
+## Our Newest Scholarship Recipients
+
+### Meet José
+
+### Meet Saúl
