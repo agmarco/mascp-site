@@ -12,7 +12,8 @@
         { "label": "Delegations", "url": "/delegations/" },
         { "label": "Preserving Historical Memory", "url": "/historical-memory/" },
         { "label": "Via Crucis", "url": "/via-crucis/" },
-        { "label": "Sister City Collaboration", "url": "/sister-city-collaboration/" }
+        { "label": "Sister City Collaboration", "url": "/sister-city-collaboration/" },
+        { "label": "Anti-Mining", "url": "/anti-mining/" }
       ]
     },
     { "label": "Get Involved", "url": "/get-involved/" },
