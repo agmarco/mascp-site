@@ -7,8 +7,6 @@ backend:
 
 media_folder: "site/src/assets/images"
 public_folder: "/assets/images"
-media_library:
-  max_file_size: 512000
 
 collections:
   # Main Pages
