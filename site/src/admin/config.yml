@@ -38,6 +38,19 @@ collections:
       - { label: "Gallery Image 4", name: "galleryImage4", widget: "image", required: false, hint: "Historical Memory page: gallery image 4 of 6" }
       - { label: "Gallery Image 5", name: "galleryImage5", widget: "image", required: false, hint: "Historical Memory page: gallery image 5 of 6" }
       - { label: "Gallery Image 6", name: "galleryImage6", widget: "image", required: false, hint: "Historical Memory page: gallery image 6 of 6" }
+      - { label: "Org Name", name: "orgName", widget: "string", required: false, hint: "Contact page: organization name" }
+      - { label: "Address Line 1", name: "address1", widget: "string", required: false, hint: "Contact page: first address line" }
+      - { label: "Address Line 2", name: "address2", widget: "string", required: false, hint: "Contact page: city, state, zip" }
+      - { label: "Email", name: "email", widget: "string", required: false, hint: "Contact page: email address" }
+      - label: "Newsletters"
+        name: "newsletters"
+        widget: "list"
+        required: false
+        hint: "Newsletter Archive page: add newest entries at the top"
+        fields:
+          - { label: "Date", name: "date", widget: "string", hint: "e.g. February 2026" }
+          - { label: "Link", name: "href", widget: "string", hint: "Full URL to the newsletter" }
+          - { label: "Thumbnail URL", name: "img", widget: "string", hint: "URL of the thumbnail image" }
 
   # Home Page (special)
   - name: "home"
