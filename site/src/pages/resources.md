@@ -4,9 +4,9 @@ layout: layouts/resources.njk
 permalink: /resources/
 heroImage: "/assets/images/e30e9f_289cee4342914fe7aa5e8c1503b6b4b7_mv2_d_1800_1215_s_2.jpg"
 description: "Resources - Information about MASCP partners and related organizations."
+sideImage1: "/assets/images/e30e9f_ce74c2d4f94d4d0794c2a485b47a9740_mv2.jpeg"
+sideImage2: "/assets/images/e30e9f_b3539e2eba054ffea2d536bdddccf810_mv2.jpeg"
 ---
-
-## Madison Arcatao Sister City Project
 
 ## New Oral History about the Beginnings of MASCP
 
@@ -16,13 +16,7 @@ Interviews in this collection include leaders in the Madison sanctuary movement,
 
 > "This was an issue that was a moral imperative …part of the purpose of the resolution was to raise public awareness that it was a very bad thing that the American government was involved financially and militarily in El Salvador."
 
-Antonio Portillo and his family in public sanctuary in Madison in 1984.
-
-You can see and hear the collection [here](https://www.madisonlivinghistory.org/collections/madison-arcatao-sister-city-project)
-
-See the Press release [here](https://www.mascp.org/_files/ugd/e30e9f_5763ec094f52483986cf7041d4ce3ea0.pdf)
-
-Mary Kay Baum delivering the official Madison Common Council resolution to Maria Chichilco (nom de guerre) in San José las Flores in fall, 1986.
+You can see and hear the collection [here](https://www.madisonlivinghistory.org/collections/madison-arcatao-sister-city-project).
 
 ## Resources and Partners
 
@@ -49,7 +43,7 @@ Mary Kay Baum delivering the official Madison Common Council resolution to Maria
     <img src="/assets/images/e30e9f_177fd4407a594d52b1706c24e9bedd7e_mv2.png" style="width: 80px; height: auto;">
   </a>
   <div>
-  <strong>U.S. El Salvador Sister Cities</strong> - National organization, founded in 1986, organizing US communities sistered with Salvadoran communities. Partners with CRIPDES in El Salvador, a national organization for the development of El Salvador.
+    <strong>U.S. El Salvador Sister Cities</strong> - National organization, founded in 1986, organizing US communities sistered with Salvadoran communities. Partners with CRIPDES in El Salvador, a national organization for the development of El Salvador.
   </div>
 </div>
 
@@ -107,7 +101,7 @@ Mary Kay Baum delivering the official Madison Common Council resolution to Maria
   </div>
 </div>
 
-## VIDEOS
+## Videos
 
 **EL PASADO NO ES HISTORIA**
 
@@ -125,6 +119,6 @@ A Documentary Portrait of Love and Survival in El Salvador's Civil War.
   <iframe width="100%" height="100%" src="https://player.vimeo.com/video/410830490" title="Maria's Story" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-## NEWSLETTER ARCHIVE
+## Newsletter Archive
 
 [See past MASCP newsletters](/newsletter-archive/)

@@ -29,6 +29,15 @@ collections:
       - { label: "Network Text", name: "networkText", widget: "markdown", required: false, hint: "About page: 'About Our Network' section" }
       - { label: "Side Image 1", name: "sideImage1", widget: "image", required: false, hint: "Via Crucis: top sidebar image" }
       - { label: "Side Image 2", name: "sideImage2", widget: "image", required: false, hint: "Via Crucis: bottom sidebar image" }
+      - { label: "Donate Heading", name: "donateHeading", widget: "text", required: false, hint: "Donate page: main heading text" }
+      - { label: "Donate Subheading", name: "donateSubheading", widget: "string", required: false, hint: "Donate page: subheading (e.g. ¡MUCHÍSIMAS GRACIAS!)" }
+      - { label: "PayPal Button ID", name: "paypalButtonId", widget: "string", required: false, hint: "Donate page: PayPal hosted button ID" }
+      - { label: "Gallery Image 1", name: "galleryImage1", widget: "image", required: false, hint: "Historical Memory page: gallery image 1 of 6" }
+      - { label: "Gallery Image 2", name: "galleryImage2", widget: "image", required: false, hint: "Historical Memory page: gallery image 2 of 6" }
+      - { label: "Gallery Image 3", name: "galleryImage3", widget: "image", required: false, hint: "Historical Memory page: gallery image 3 of 6" }
+      - { label: "Gallery Image 4", name: "galleryImage4", widget: "image", required: false, hint: "Historical Memory page: gallery image 4 of 6" }
+      - { label: "Gallery Image 5", name: "galleryImage5", widget: "image", required: false, hint: "Historical Memory page: gallery image 5 of 6" }
+      - { label: "Gallery Image 6", name: "galleryImage6", widget: "image", required: false, hint: "Historical Memory page: gallery image 6 of 6" }
 
   # Home Page (special)
   - name: "home"
