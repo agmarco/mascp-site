@@ -22,7 +22,11 @@ collections:
       - { label: "Hero Image", name: "heroImage", widget: "image", required: false }
       - { label: "Hero Title", name: "heroTitle", widget: "string", required: false, hint: "Override the page title shown on hero" }
       - { label: "Description", name: "description", widget: "text", required: false }
-      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Body", name: "body", widget: "markdown", required: false }
+      - { label: "Section Image", name: "sectionImage", widget: "image", required: false, hint: "About page: image shown beside the mission text" }
+      - { label: "Mission Text", name: "missionText", widget: "text", required: false, hint: "About page: mission paragraph" }
+      - { label: "About Text", name: "aboutText", widget: "markdown", required: false, hint: "About page: 'About MASCP' section" }
+      - { label: "Network Text", name: "networkText", widget: "markdown", required: false, hint: "About page: 'About Our Network' section" }
 
   # Home Page (special)
   - name: "home"

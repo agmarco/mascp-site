@@ -1,4 +1,8 @@
+const markdownIt = require("markdown-it");
+const md = markdownIt({ html: true });
+
 module.exports = function(eleventyConfig) {
+  eleventyConfig.addFilter("markdownify", (str) => str ? md.render(str) : "");
   // Pass through static assets
   eleventyConfig.addPassthroughCopy("src/assets");
   eleventyConfig.addPassthroughCopy("src/admin");
