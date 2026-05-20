@@ -2,8 +2,8 @@
 
 The Madison Arcatao Sister City Project website, migrated from Wix to a statically-generated Eleventy site.
 
-- **Live URL:** https://mascp.netlify.app/
-- **Production domain (pending):** https://www.mascp.org/ — DNS cutover is the only remaining step to go live
+- **Live URL:** https://www.mascp.org/ (DNS cutover complete as of May 2026)
+- **Netlify preview:** https://mascp.netlify.app/
 - **Netlify account:** Log in at netlify.com via GitHub (agmarco)
 - **GitHub repo:** https://github.com/agmarco/mascp-site
 
@@ -194,15 +194,25 @@ Edit `site/src/_data/social.json` to update Facebook/YouTube links shown in the 
 
 ---
 
-## Going Live (DNS Cutover)
+## DNS / Infrastructure
 
-Everything is deployed and working. The only remaining step is pointing mascp.org to Netlify:
+**Current state (May 2026):**
+- `mascp.org` A record → `75.2.60.5` (Netlify) — set in Wix DNS panel
+- `www.mascp.org` CNAME → `mascp.netlify.app` — set in Wix DNS panel
+- Domain transfer to **Porkbun** in progress (~5-7 days from May 19 2026)
+- Once transfer completes: set Netlify nameservers in Porkbun (`dns1-4.p07.nsone.net`)
+- Netlify DNS is pre-staged with all records (MX, SPF, TXT, MailerLite DKIM)
 
-1. Log in to your domain registrar (wherever mascp.org DNS is managed)
-2. In the Netlify dashboard, go to **Site Configuration → Domain Management → Add custom domain** and enter `mascp.org`
-3. Update your DNS records to point to Netlify's servers (Netlify will show you the exact values)
-4. Wait for DNS propagation (usually a few minutes to a few hours)
-5. Netlify will automatically provision an SSL certificate via Let's Encrypt
+**Email (info@mascp.org):**
+- Google Workspace MX records in both Wix DNS (active) and Netlify DNS (staged)
+- SPF: `v=spf1 include:_spf.mlsend.com include:_spf.google.com include:_mlsend.com ~all`
+- MailerLite sender authentication: complete (`litesrv._domainkey` CNAME in Netlify DNS)
+
+**Post-transfer checklist:**
+- [ ] Set Netlify nameservers in Porkbun
+- [ ] Verify `dig mascp.org NS` returns Netlify nameservers
+- [ ] Submit `https://www.mascp.org/sitemap.xml` to Google Search Console
+- [ ] Let Wix subscription lapse
 
 ---
 
