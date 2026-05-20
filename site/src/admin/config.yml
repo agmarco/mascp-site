@@ -38,6 +38,17 @@ collections:
       - { label: "Gallery Image 4", name: "galleryImage4", widget: "image", required: false, hint: "Historical Memory page: gallery image 4 of 6" }
       - { label: "Gallery Image 5", name: "galleryImage5", widget: "image", required: false, hint: "Historical Memory page: gallery image 5 of 6" }
       - { label: "Gallery Image 6", name: "galleryImage6", widget: "image", required: false, hint: "Historical Memory page: gallery image 6 of 6" }
+      - { label: "Intro Text", name: "introText", widget: "text", required: false, hint: "Fair Trade page: intro paragraph below the title" }
+      - { label: "Main Text", name: "mainText", widget: "markdown", required: false, hint: "Fair Trade page: main content column" }
+      - { label: "Civil War Text", name: "civilWarText", widget: "text", required: false, hint: "History page: civil war section paragraph" }
+      - { label: "Accompaniment Text", name: "accompanimentText", widget: "markdown", required: false, hint: "History page: accompaniment section paragraphs" }
+      - { label: "Video Title", name: "videoTitle", widget: "string", required: false, hint: "History page: sidebar video title" }
+      - { label: "Video Caption", name: "videoCaption", widget: "text", required: false, hint: "History page: sidebar video caption" }
+      - { label: "Video URL", name: "videoUrl", widget: "string", required: false, hint: "History page: YouTube embed URL" }
+      - { label: "Quote Text", name: "quoteText", widget: "text", required: false, hint: "History page: full-width quote" }
+      - { label: "Quote Image", name: "quoteImage", widget: "image", required: false, hint: "History page: background image behind the quote" }
+      - { label: "Organizing Text", name: "organizingText", widget: "markdown", required: false, hint: "History page: organizing section paragraphs" }
+      - { label: "Celebrations Image", name: "celebrationsImage", widget: "image", required: false, hint: "History page: celebrations image in Learn More section" }
       - { label: "Org Name", name: "orgName", widget: "string", required: false, hint: "Contact page: organization name" }
       - { label: "Address Line 1", name: "address1", widget: "string", required: false, hint: "Contact page: first address line" }
       - { label: "Address Line 2", name: "address2", widget: "string", required: false, hint: "Contact page: city, state, zip" }
