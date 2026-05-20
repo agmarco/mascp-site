@@ -2,7 +2,7 @@
 title: "Newsletter Archive"
 layout: layouts/newsletter-archive.njk
 permalink: /newsletter-archive/
-heroImage: "/assets/images/newsletter-archive/e30e9f_23345402e2954544bbaa98c1e9e1b035_mv2.jpg"
+heroImage: "/assets/images/e30e9f_23345402e2954544bbaa98c1e9e1b035_mv2.jpg"
 newsletters:
   - { date: "February 2026", href: "https://madisonarcatao.wixsite.com/so/62PBvt121?languageTag=en", img: "https://static.wixstatic.com/media/e30e9f_2a4b450f0a794fbca11c31d8ba72d6c5~mv2.png" }
   - { date: "January 2026", href: "https://shoutout.wix.com/so/33P9TrknK?languageTag=en", img: "https://static.wixstatic.com/media/e30e9f_2eeae3fb78574cb3927b0c16a58702b7~mv2.jpg" }

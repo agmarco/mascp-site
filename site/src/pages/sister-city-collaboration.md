@@ -2,7 +2,7 @@
 title: "Sister City Collaboration"
 layout: layouts/sister-city-collaboration.njk
 permalink: /sister-city-collaboration/
-heroImage: "/assets/images/copy-of-anti-mining/e30e9f_cbd52ad9d282470788966f9f49ac617f_mv2.jpg"
+heroImage: "/assets/images/e30e9f_cbd52ad9d282470788966f9f49ac617f_mv2.jpg"
 description: "Madison Sister City Collaboration Committee - MASCP participates with Madison's sister cities."
 ---
 

@@ -2,7 +2,7 @@
 title: "Home"
 layout: layouts/home.njk
 permalink: /
-heroImage: "/assets/images/home/romero-community-celebration-2026.png"
+heroImage: "/assets/images/romero-community-celebration-2026.png"
 welcome: "Welcome to the Madison Arcatao Sister City Project (MASCP) website. MASCP is the organization in Madison Wisconsin, USA that facilitates the official sister city relationship between Madison and Arcatao, El Salvador, a small town in the mountains on the border of El Salvador and Honduras. Read on to learn about our history, current activities and how you can get involved."
 ---
 

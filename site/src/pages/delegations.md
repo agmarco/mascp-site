@@ -1,8 +1,8 @@
 ---
-title: ""
+title: "Delegations"
 layout: layouts/delegations.njk
 permalink: /delegations/
-heroImage: "/assets/images/activities/e30e9f_1541c08e14b745c091352acb37d8ece2_mv2.jpg"
+heroImage: "/assets/images/e30e9f_1541c08e14b745c091352acb37d8ece2_mv2.jpg"
 description: "MASCP delegations are focused on person-to- person relationships and cross-cultural solidarity. They are carefully planned for sharing information and experienc"
 ---
 

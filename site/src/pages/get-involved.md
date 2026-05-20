@@ -2,7 +2,7 @@
 title: "Get Involved"
 layout: layouts/page.njk
 permalink: /get-involved/
-heroImage: "/assets/images/get-involved/e30e9f_7e18f69a341f4376bb2686fa7b97cdd6_mv2_d_1600_1200_s_2.jpg"
+heroImage: "/assets/images/e30e9f_7e18f69a341f4376bb2686fa7b97cdd6_mv2_d_1600_1200_s_2.jpg"
 description: "Get Involved with MASCP - Join us in supporting our sister city relationship with Arcatao, El Salvador."
 ---
 

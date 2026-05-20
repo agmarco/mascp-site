@@ -1,7 +1,7 @@
 ---
 title: "Water is life: stories of grassroots environmental activism in El Salvador and the United States."
 layout: layouts/page.njk
-heroImage: "/assets/images/event-water-is-life/e30e9f_80bc4ba049884d259287c8eeb8778108_mv2.png"
+heroImage: "/assets/images/e30e9f_80bc4ba049884d259287c8eeb8778108_mv2.png"
 date: 2017-10-02T18:00:00.000Z
 ---
 

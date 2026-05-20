@@ -7,6 +7,8 @@ backend:
 
 media_folder: "site/src/assets/images"
 public_folder: "/assets/images"
+media_library:
+  max_file_size: 512000
 
 collections:
   # Main Pages
@@ -17,7 +19,7 @@ collections:
     slug: "{{slug}}"
     fields:
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/page.njk" }
+      - { label: "Layout", name: "layout", widget: "select", default: "layouts/page.njk", options: ["layouts/page.njk", "layouts/about.njk", "layouts/delegations.njk"] }
       - { label: "Permalink", name: "permalink", widget: "string", required: false }
       - { label: "Hero Image", name: "heroImage", widget: "image", required: false }
       - { label: "Hero Title", name: "heroTitle", widget: "string", required: false, hint: "Override the page title shown on hero" }

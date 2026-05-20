@@ -2,7 +2,7 @@
 title: "Joint Efforts"
 layout: layouts/page.njk
 permalink: /joint-efforts/
-heroImage: "/assets/images/anti-mining/e30e9f_a3fe079569cb450e8a44bc484b1735b5_mv2.jpg"
+heroImage: "/assets/images/e30e9f_a3fe079569cb450e8a44bc484b1735b5_mv2.jpg"
 ---
 
 ## Madison Arcatao Sister City Project

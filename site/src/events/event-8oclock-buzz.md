@@ -1,7 +1,7 @@
 ---
 title: "8 O’Clock Buzz - Interview with Cintia and Zulma"
 layout: layouts/page.njk
-heroImage: "/assets/images/event-8oclock-buzz/e30e9f_7304d52c6177482ab16a91397220f11b_mv2.jpg"
+heroImage: "/assets/images/e30e9f_7304d52c6177482ab16a91397220f11b_mv2.jpg"
 date: 2017-10-02T08:00:00.000Z
 ---
 

@@ -2,7 +2,7 @@
 title: "Preserving the Historical Memory"
 layout: layouts/historical-memory.njk
 permalink: /historical-memory/
-heroImage: "/assets/images/copy-of-fair-trade/e30e9f_6fa8be4fbbdf4c14b3ad664f23175ee9_mv2.jpg"
+heroImage: "/assets/images/e30e9f_6fa8be4fbbdf4c14b3ad664f23175ee9_mv2.jpg"
 description: "It is very important to the people of Arcatao who lived through the war to preserve their memories of the conflict and to record why and how they were fighting "
 ---
 

@@ -2,7 +2,7 @@
 title: "Anti-Mining"
 layout: layouts/page.njk
 permalink: /anti-mining/
-heroImage: "/assets/images/anti-mining/e30e9f_a3fe079569cb450e8a44bc484b1735b5_mv2.jpg"
+heroImage: "/assets/images/e30e9f_a3fe079569cb450e8a44bc484b1735b5_mv2.jpg"
 description: "MASCP's anti-mining advocacy connecting communities in El Salvador and Wisconsin against the devastating effects of extractive mining."
 ---
 

@@ -2,7 +2,7 @@
 title: "Via Crucis"
 layout: layouts/via-crucis.njk
 permalink: /via-crucis/
-heroImage: "/assets/images/copy-of-scholarships/e30e9f_c61cdaccf1b74f469cdc34fe3c6b0d67_mv2.jpg"
+heroImage: "/assets/images/e30e9f_c61cdaccf1b74f469cdc34fe3c6b0d67_mv2.jpg"
 description: "Via Crucis - Stations of the Cross and Stations of the Struggle in Arcatao."
 ---
 

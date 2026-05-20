@@ -1,7 +1,7 @@
 ---
 title: "MASCP's Annual Pupusa Dinner and Fundraiser"
 layout: layouts/page.njk
-heroImage: "/assets/images/event-pupusa-dinner/e30e9f_87a524d84ab54e0992a803567abc0c32_mv2.png"
+heroImage: "/assets/images/e30e9f_87a524d84ab54e0992a803567abc0c32_mv2.png"
 date: 2025-08-16T17:00:00.000Z
 ---
 

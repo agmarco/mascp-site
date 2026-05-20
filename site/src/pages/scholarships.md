@@ -2,7 +2,7 @@
 title: "Scholarships"
 layout: layouts/scholarships.njk
 permalink: /scholarships/
-heroImage: "/assets/images/scholarships/e30e9f_85d2954e1e224a08b575b5e935f3a6ef_mv2.jpg"
+heroImage: "/assets/images/e30e9f_85d2954e1e224a08b575b5e935f3a6ef_mv2.jpg"
 description: "MASCP funds scholarships for university bound youth in Arcatao in hopes that this will give them skills to stay in their country and become future leaders."
 ---
 

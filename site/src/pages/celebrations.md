@@ -2,7 +2,7 @@
 title: "Celebrations"
 layout: layouts/page.njk
 permalink: /celebrations/
-heroImage: "/assets/images/celebrations/e30e9f_dd2113aec33240dd807c518c00bf57c2_mv2.png"
+heroImage: "/assets/images/e30e9f_dd2113aec33240dd807c518c00bf57c2_mv2.png"
 ---
 
 ## Madison Arcatao Sister City Project
