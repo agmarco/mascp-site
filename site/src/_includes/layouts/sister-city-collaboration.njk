@@ -25,8 +25,8 @@ layout: layouts/base.njk
       <!-- Images Column - right side: narrow images stacked and aligned right -->
       <div class="md:w-2/5">
         <div class="flex flex-col gap-6">
-          <img src="/assets/images/e30e9f_2f1b1b496d71449e9b8e4a822354b19f_mv2.jpg" alt="Sister City Collaboration" style="width:100%;max-width:420px;height:auto;margin-left:auto;object-fit:contain;display:block;">
-          <img src="/assets/images/e30e9f_8db2880529a74386970c06411cfb71e1_mv2.jpg" alt="Sister City Collaboration" style="width:100%;max-width:420px;height:auto;margin-left:auto;object-fit:contain;display:block;">
+          {% if sideImage1 %}<img src="{{ sideImage1 }}" alt="Sister City Collaboration" style="width:100%;max-width:420px;height:auto;margin-left:auto;object-fit:contain;display:block;">{% endif %}
+          {% if sideImage2 %}<img src="{{ sideImage2 }}" alt="Sister City Collaboration" style="width:100%;max-width:420px;height:auto;margin-left:auto;object-fit:contain;display:block;">{% endif %}
         </div>
       </div>
     </div>

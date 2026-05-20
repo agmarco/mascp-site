@@ -27,6 +27,8 @@ collections:
       - { label: "Mission Text", name: "missionText", widget: "text", required: false, hint: "About page: mission paragraph" }
       - { label: "About Text", name: "aboutText", widget: "markdown", required: false, hint: "About page: 'About MASCP' section" }
       - { label: "Network Text", name: "networkText", widget: "markdown", required: false, hint: "About page: 'About Our Network' section" }
+      - { label: "Side Image 1", name: "sideImage1", widget: "image", required: false, hint: "Via Crucis: top sidebar image" }
+      - { label: "Side Image 2", name: "sideImage2", widget: "image", required: false, hint: "Via Crucis: bottom sidebar image" }
 
   # Home Page (special)
   - name: "home"
