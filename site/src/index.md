@@ -12,5 +12,3 @@ welcome: Welcome to the Madison Arcatao Sister City Project (MASCP) website.
   small town in the mountains on the border of El Salvador and Honduras. Read on
   to learn about our history, current activities and how you can get involved.
 ---
-
-### Our Latest Posts
