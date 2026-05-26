@@ -74,6 +74,8 @@ collections:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/home.njk" }
           - { label: "Hero Image", name: "heroImage", widget: "image" }
+          - { label: "Hero Image Caption", name: "heroCaption", widget: "string", required: false, hint: "Optional caption shown below the hero image" }
+          - { label: "Welcome Heading", name: "welcomeHeading", widget: "string", required: false, hint: "Large heading shown above the welcome text" }
           - { label: "Welcome Text", name: "welcome", widget: "text" }
           - { label: "Additional Content", name: "body", widget: "markdown", required: false }
 

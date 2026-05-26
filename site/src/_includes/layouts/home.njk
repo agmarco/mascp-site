@@ -7,13 +7,18 @@ layout: layouts/base.njk
 <section class="py-8 bg-white">
   <div class="max-w-3xl mx-auto px-4">
     <img src="{{ heroImage }}" alt="Visit Arcatao - Madison's Sister City in El Salvador" class="w-full h-auto rounded-lg shadow-lg">
+    {% if heroCaption %}
+    <p class="text-sm text-mascp-gray text-center mt-3 italic">{{ heroCaption }}</p>
+    {% endif %}
   </div>
 </section>
 {% endif %}
 
 <!-- Welcome Section -->
 <section class="content-section text-center">
-  <h2 class="text-3xl md:text-4xl font-heading text-mascp-dark mb-6">Madison Arcatao Sister City Project</h2>
+  {% if welcomeHeading %}
+  <h2 class="text-3xl md:text-4xl font-heading text-mascp-dark mb-6">{{ welcomeHeading }}</h2>
+  {% endif %}
   <p class="text-lg text-mascp-gray max-w-3xl mx-auto leading-relaxed">
     {{ welcome | safe }}
   </p>
