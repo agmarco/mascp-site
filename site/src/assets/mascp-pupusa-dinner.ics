@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//MASCP//Pupusa Dinner 2026//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+DTSTART:20260822T220000Z
+DTEND:20260823T003000Z
+SUMMARY:MASCP Pupusa Dinner & 40th Anniversary Celebration
+DESCRIPTION:Please join us as we joyfully celebrate 40 years of sistering and hear back from our most recent delegations to El Salvador. Featuring a 40 Years of Sistering slideshow\, Salvadoran music\, and silent auction. Sliding scale suggested donation: $4–$40. Everyone welcome!\n\nAccessibility: Wheelchair accessible. Please allow time for neighborhood street parking. Bike parking across the street. Nearby buses: A\, B\, C and 38.
+LOCATION:Aubergine\, 1226 Williamson Street\, Madison\, WI
+URL:https://mascp.org/rsvp/
+END:VEVENT
+END:VCALENDAR

@@ -6,9 +6,20 @@ layout: layouts/base.njk
 {% if heroImage %}
 <section class="py-8 bg-white">
   <div class="max-w-3xl mx-auto px-4">
+    {% if heroLink %}
+    <a href="{{ heroLink }}">
+      <img src="{{ heroImage }}" alt="MASCP Event Invitation" class="w-full h-auto rounded-lg shadow-lg">
+    </a>
+    {% else %}
     <img src="{{ heroImage }}" alt="Visit Arcatao - Madison's Sister City in El Salvador" class="w-full h-auto rounded-lg shadow-lg">
+    {% endif %}
     {% if heroCaption %}
     <p class="text-sm text-mascp-gray text-center mt-3 italic">{{ heroCaption }}</p>
+    {% endif %}
+    {% if heroLink %}
+    <div class="text-center mt-6">
+      <a href="{{ heroLink }}" class="btn-primary inline-block text-lg px-8 py-3">RSVP Now &rarr;</a>
+    </div>
     {% endif %}
   </div>
 </section>
