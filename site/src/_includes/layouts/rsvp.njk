@@ -115,6 +115,32 @@ layout: layouts/base.njk
           </a>
         </div>
       </div>
+
+      <div class="border-t border-gray-200 pt-8 mt-8">
+        <p class="text-sm font-medium text-mascp-dark mb-1">Invite a friend</p>
+        <p class="text-xs text-mascp-gray mb-4">This will open your email app with a pre-written invitation.</p>
+        <div class="space-y-3 text-left">
+          <input
+            type="email"
+            id="invite-email"
+            placeholder="Friend's email address"
+            class="w-full px-4 py-3 border border-gray-400 text-base focus:outline-none focus:border-mascp-terracotta"
+          >
+          <textarea
+            id="invite-message"
+            rows="3"
+            placeholder="Add a personal message (optional)"
+            class="w-full px-4 py-3 border border-gray-400 text-base focus:outline-none focus:border-mascp-terracotta resize-none"
+          ></textarea>
+          <button
+            id="invite-btn"
+            type="button"
+            class="w-full bg-mascp-dark text-white px-4 py-3 text-base font-medium hover:opacity-90 transition"
+          >
+            Send Invitation
+          </button>
+        </div>
+      </div>
     </div>
 
     <!-- Accessibility info -->
@@ -160,4 +186,27 @@ layout: layouts/base.njk
       });
     });
   })();
+</script>
+
+<script>
+  document.getElementById('invite-btn').addEventListener('click', function () {
+    var friendEmail = document.getElementById('invite-email').value.trim();
+    if (!friendEmail) {
+      document.getElementById('invite-email').focus();
+      return;
+    }
+    var personal = document.getElementById('invite-message').value.trim();
+    var subject = 'Join me at the MASCP Pupusa Dinner & 40th Anniversary — August 22';
+    var body = (personal ? personal + '\n\n---\n\n' : '') +
+      'I just RSVP\'d and wanted to invite you!\n\n' +
+      'MASCP Pupusa Dinner and 40th Anniversary Celebration\n' +
+      'Saturday, August 22 · 5:00–7:30pm\n' +
+      'Aubergine, 1226 Williamson Street, Madison\n\n' +
+      'Featuring a 40 Years of Sistering slideshow, Salvadoran music, and silent auction.\n' +
+      'Sliding scale suggested donation: $4–$40. Everyone welcome!\n\n' +
+      'RSVP here: https://mascp.org/rsvp/';
+    window.location.href = 'mailto:' + encodeURIComponent(friendEmail) +
+      '?subject=' + encodeURIComponent(subject) +
+      '&body=' + encodeURIComponent(body);
+  });
 </script>
