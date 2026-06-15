@@ -7,9 +7,17 @@ layout: layouts/base.njk
 <section class="py-8 bg-white">
   <div class="max-w-3xl mx-auto px-4">
     {% if heroLink %}
-    <a href="{{ heroLink }}">
-      <img src="{{ heroImage }}" alt="MASCP Event Invitation" class="w-full h-auto rounded-lg shadow-lg">
+    <a href="{{ heroLink }}" aria-label="View invitation and RSVP for the MASCP Pupusa Dinner and 40th Anniversary Celebration">
+      <img src="{{ heroImage }}" alt="Invitation: MASCP Pupusa Dinner and 40th Anniversary Celebration. Saturday, August 22, 5:00 to 7:30pm. Aubergine, 1226 Williamson Street, Madison. Featuring a 40 Years of Sistering slideshow, Salvadoran music, and silent auction. Sliding scale suggested donation $4 to $40. Everyone welcome. Wheelchair accessible." class="w-full h-auto rounded-lg shadow-lg">
     </a>
+    <p class="sr-only">
+      MASCP Pupusa Dinner and 40th Anniversary Celebration.
+      Saturday, August 22, 5:00 to 7:30pm at Aubergine, 1226 Williamson Street, Madison.
+      Please join us as we joyfully celebrate 40 years of sistering and hear back from our most recent delegations to El Salvador.
+      Featuring a 40 Years of Sistering slideshow, Salvadoran music, and silent auction.
+      Sliding scale suggested donation: $4 to $40. Everyone welcome.
+      Accessibility: Wheelchair accessible. Please allow time for neighborhood street parking. Bike parking across the street. Nearby buses: A, B, C and 38.
+    </p>
     {% else %}
     <img src="{{ heroImage }}" alt="Visit Arcatao - Madison's Sister City in El Salvador" class="w-full h-auto rounded-lg shadow-lg">
     {% endif %}
