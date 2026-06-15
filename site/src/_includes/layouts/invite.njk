@@ -1,0 +1,77 @@
+---
+layout: layouts/base.njk
+---
+
+<section class="bg-white">
+  <div class="max-w-2xl mx-auto px-4 md:px-8 py-12">
+
+    <!-- Event header -->
+    <div class="text-center mb-10">
+      <h1 class="text-3xl md:text-4xl font-bold text-mascp-terracotta mb-4">Invite a Friend</h1>
+      <p class="text-lg text-mascp-gray">{{ eventName }}</p>
+      <p class="text-lg font-semibold text-mascp-dark">{{ eventDate }} · {{ eventTime }}</p>
+      <p class="text-lg text-mascp-gray">{{ eventVenue }}</p>
+      <div class="border-b-2 border-mascp-terracotta w-24 mx-auto mt-6"></div>
+    </div>
+
+    <p class="text-mascp-gray text-center mb-8">Enter a friend's email and an optional personal note. Clicking Send will open your email app with a pre-written invitation.</p>
+
+    <div class="space-y-4">
+      <div>
+        <label for="invite-email" class="block text-base font-bold text-mascp-dark mb-2">Friend's Email <span class="text-mascp-terracotta">*</span></label>
+        <input
+          type="email"
+          id="invite-email"
+          placeholder="friend@email.com"
+          class="w-full px-4 py-4 border border-gray-400 text-lg font-semibold text-mascp-dark focus:outline-none focus:border-mascp-terracotta"
+        >
+      </div>
+
+      <div>
+        <label for="invite-message" class="block text-base font-bold text-mascp-dark mb-2">Personal Message (optional)</label>
+        <textarea
+          id="invite-message"
+          rows="4"
+          placeholder="Add a personal note..."
+          class="w-full px-4 py-4 border border-gray-400 text-lg text-mascp-dark focus:outline-none focus:border-mascp-terracotta resize-none"
+        ></textarea>
+      </div>
+
+      <button
+        id="invite-btn"
+        type="button"
+        class="w-full bg-mascp-terracotta text-white px-4 py-4 text-lg font-medium hover:opacity-90 transition"
+      >
+        Send Invitation
+      </button>
+
+      <p class="text-center mt-4">
+        <a href="/rsvp/" class="text-sm text-mascp-terracotta underline">Haven't RSVP'd yet? Reserve your place first &rarr;</a>
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<script>
+  document.getElementById('invite-btn').addEventListener('click', function () {
+    var friendEmail = document.getElementById('invite-email').value.trim();
+    if (!friendEmail) {
+      document.getElementById('invite-email').focus();
+      return;
+    }
+    var personal = document.getElementById('invite-message').value.trim();
+    var subject = 'Join me at the MASCP Pupusa Dinner & 40th Anniversary — August 22';
+    var body = (personal ? personal + '\n\n---\n\n' : '') +
+      'I wanted to invite you to this special event!\n\n' +
+      'MASCP Pupusa Dinner and 40th Anniversary Celebration\n' +
+      'Saturday, August 22 · 5:00–7:30pm\n' +
+      'Aubergine, 1226 Williamson Street, Madison\n\n' +
+      'Featuring a 40 Years of Sistering slideshow, Salvadoran music, and silent auction.\n' +
+      'Sliding scale suggested donation: $4–$40. Everyone welcome!\n\n' +
+      'RSVP here: https://mascp.org/rsvp/';
+    window.location.href = 'mailto:' + encodeURIComponent(friendEmail) +
+      '?subject=' + encodeURIComponent(subject) +
+      '&body=' + encodeURIComponent(body);
+  });
+</script>

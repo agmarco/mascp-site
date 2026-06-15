@@ -17,8 +17,9 @@ layout: layouts/base.njk
     <p class="text-sm text-mascp-gray text-center mt-3 italic">{{ heroCaption }}</p>
     {% endif %}
     {% if heroLink %}
-    <div class="text-center mt-6">
+    <div class="flex flex-col sm:flex-row gap-3 justify-center mt-6">
       <a href="{{ heroLink }}" class="btn-primary inline-block text-lg px-8 py-3">RSVP Now &rarr;</a>
+      <a href="/invite/" class="btn-secondary inline-block text-lg px-8 py-3">Invite a Friend</a>
     </div>
     {% endif %}
   </div>
