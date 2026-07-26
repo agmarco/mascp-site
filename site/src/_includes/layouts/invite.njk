@@ -18,6 +18,16 @@ layout: layouts/base.njk
 
     <div class="space-y-4">
       <div>
+        <label for="invite-from-name" class="block text-base font-bold text-mascp-dark mb-2">Your Name</label>
+        <input
+          type="text"
+          id="invite-from-name"
+          placeholder="Your name"
+          class="w-full px-4 py-4 border border-gray-400 text-lg font-semibold text-mascp-dark focus:outline-none focus:border-mascp-terracotta"
+        >
+      </div>
+
+      <div>
         <label for="invite-email" class="block text-base font-bold text-mascp-dark mb-2">Friend's Email <span class="text-mascp-terracotta">*</span></label>
         <input
           type="email"
@@ -73,6 +83,7 @@ layout: layouts/base.njk
       document.getElementById('invite-email').focus();
       return;
     }
+    var fromName = document.getElementById('invite-from-name').value.trim();
     var personal = document.getElementById('invite-message').value.trim();
 
     btn.disabled = true;
@@ -84,6 +95,7 @@ layout: layouts/base.njk
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         friendEmail: friendEmail,
+        fromName: fromName,
         personalMessage: personal,
         eventName: 'MASCP Pupusa Dinner and 40th Anniversary Celebration',
         eventDate: 'Saturday, August 22, 2026',
@@ -97,6 +109,7 @@ layout: layouts/base.njk
         status.className = 'text-center text-sm mt-2 text-green-700';
         document.getElementById('invite-email').value = '';
         document.getElementById('invite-message').value = '';
+        document.getElementById('invite-from-name').value = '';
       })
       .catch(function (err) {
         status.textContent = err.message || 'Something went wrong. Please try again.';

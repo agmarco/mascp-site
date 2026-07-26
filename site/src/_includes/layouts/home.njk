@@ -7,6 +7,10 @@ layout: layouts/base.njk
 <section class="py-8 bg-white">
   <div class="max-w-3xl mx-auto px-4">
     {% if heroLink %}
+    <div class="flex flex-col sm:flex-row gap-3 justify-center mb-6">
+      <a href="{{ heroLink }}" class="btn-primary inline-block text-lg px-8 py-3">RSVP Now &rarr;</a>
+      <a href="/invite/" class="btn-secondary inline-block text-lg px-8 py-3">Invite a Friend</a>
+    </div>
     <a href="{{ heroLink }}" aria-label="View invitation and RSVP for the MASCP Pupusa Dinner and 40th Anniversary Celebration">
       <img src="{{ heroImage }}" alt="Invitation: MASCP Pupusa Dinner and 40th Anniversary Celebration. Saturday, August 22, 5:00 to 7:30pm. Aubergine, 1226 Williamson Street, Madison. Featuring a 40 Years of Sistering slideshow, Salvadoran music, and silent auction. Sliding scale suggested donation $4 to $40. Everyone welcome. Wheelchair accessible." class="w-full h-auto rounded-lg shadow-lg">
     </a>
@@ -23,12 +27,6 @@ layout: layouts/base.njk
     {% endif %}
     {% if heroCaption %}
     <p class="text-sm text-mascp-gray text-center mt-3 italic">{{ heroCaption }}</p>
-    {% endif %}
-    {% if heroLink %}
-    <div class="flex flex-col sm:flex-row gap-3 justify-center mt-6">
-      <a href="{{ heroLink }}" class="btn-primary inline-block text-lg px-8 py-3">RSVP Now &rarr;</a>
-      <a href="/invite/" class="btn-secondary inline-block text-lg px-8 py-3">Invite a Friend</a>
-    </div>
     {% endif %}
   </div>
 </section>

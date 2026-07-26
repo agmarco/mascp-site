@@ -122,6 +122,12 @@ layout: layouts/base.njk
         <p class="text-xs text-mascp-gray mb-4">We'll send them a pre-written invitation email.</p>
         <div class="space-y-3 text-left">
           <input
+            type="text"
+            id="invite-from-name"
+            placeholder="Your name"
+            class="w-full px-4 py-4 border border-gray-400 text-lg font-semibold text-mascp-dark focus:outline-none focus:border-mascp-terracotta"
+          >
+          <input
             type="email"
             id="invite-email"
             placeholder="Friend's email address"
@@ -174,6 +180,7 @@ layout: layouts/base.njk
       }).then(function () {
         formWrap.classList.add('hidden');
         success.classList.remove('hidden');
+        document.getElementById('invite-from-name').value = document.getElementById('rsvp-name').value.trim();
 
         if (donation > 0) {
           paypalNote.classList.remove('hidden');
@@ -199,6 +206,7 @@ layout: layouts/base.njk
       document.getElementById('invite-email').focus();
       return;
     }
+    var fromName = document.getElementById('invite-from-name').value.trim();
     var personal = document.getElementById('invite-message').value.trim();
 
     btn.disabled = true;
@@ -210,6 +218,7 @@ layout: layouts/base.njk
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         friendEmail: friendEmail,
+        fromName: fromName,
         personalMessage: personal,
         eventName: 'MASCP Pupusa Dinner and 40th Anniversary Celebration',
         eventDate: 'Saturday, August 22, 2026',

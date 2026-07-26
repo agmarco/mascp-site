@@ -13,6 +13,7 @@ export const handler = async (event) => {
   }
 
   const friendEmail = (payload.friendEmail || '').trim();
+  const fromName = (payload.fromName || '').trim();
   const personalMessage = (payload.personalMessage || '').trim();
   const eventName = (payload.eventName || '').trim();
   const eventDate = (payload.eventDate || '').trim();
@@ -31,16 +32,23 @@ export const handler = async (event) => {
     return { statusCode: 500, body: JSON.stringify({ error: 'Email service is not configured.' }) };
   }
 
-  const subject = `Join me at the ${eventName}`;
+  const subject = fromName
+    ? `${fromName} invited you to the ${eventName}`
+    : `Join me at the ${eventName}`;
+
+  const intro = fromName
+    ? `${fromName} wanted to invite you to this special event!`
+    : `I wanted to invite you to this special event!`;
 
   const textBody =
-    (personalMessage ? personalMessage + '\n\n---\n\n' : '') +
-    `I wanted to invite you to this special event!\n\n` +
+    (personalMessage ? personalMessage + '\n\n' : '') +
+    intro + '\n\n' +
     `${eventName}\n` +
     `${eventDate} · ${eventTime}\n` +
     `${eventVenue}\n\n` +
     `RSVP here: https://mascp.org/rsvp/\n\n` +
-    `View the invitation: https://mascp.org/assets/images/mascp-invitation.png`;
+    `View the invitation: https://mascp.org/assets/images/mascp-invitation.png` +
+    (fromName ? `\n\n— ${fromName}` : '');
 
   const htmlBody = `
 <!DOCTYPE html>
@@ -67,6 +75,7 @@ export const handler = async (event) => {
           <tr>
             <td style="padding:0 32px 16px;">
               <p style="margin:0;font-size:16px;color:#333;font-family:Arial,sans-serif;white-space:pre-wrap;">${escapeHtml(personalMessage)}</p>
+              ${fromName ? `<p style="margin:12px 0 0;font-size:16px;color:#333;font-family:Arial,sans-serif;">— ${escapeHtml(fromName)}</p>` : ''}
             </td>
           </tr>` : ''}
 
