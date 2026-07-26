@@ -14,7 +14,15 @@ layout: layouts/base.njk
       <div class="border-b-2 border-mascp-terracotta w-24 mx-auto mt-6"></div>
     </div>
 
-    <p class="text-mascp-gray text-center mb-8">Enter a friend's email and an optional personal note. Clicking Send will open your email app with a pre-written invitation.</p>
+    <a href="/rsvp/" aria-label="View invitation and RSVP for the MASCP Pupusa Dinner and 40th Anniversary Celebration" class="block mb-8">
+      <img
+        src="/assets/images/mascp-invitation.png"
+        alt="Invitation: MASCP Pupusa Dinner and 40th Anniversary Celebration. Saturday, August 22, 5:00 to 7:30pm. Aubergine, 1226 Williamson Street, Madison. Featuring a 40 Years of Sistering slideshow, Salvadoran music, and silent auction. Sliding scale suggested donation $4 to $40. Everyone welcome. Wheelchair accessible."
+        class="w-full h-auto rounded-lg shadow-lg"
+      >
+    </a>
+
+    <p class="text-mascp-gray text-center mb-8">Enter a friend's email and an optional personal note. We'll send them this invitation with a link to RSVP.</p>
 
     <div class="space-y-4">
       <div>
@@ -45,6 +53,8 @@ layout: layouts/base.njk
         Send Invitation
       </button>
 
+      <p id="invite-status" class="text-center text-sm mt-2"></p>
+
       <p class="text-center mt-4">
         <a href="/rsvp/" class="text-sm text-mascp-terracotta underline">Haven't RSVP'd yet? Reserve your place first &rarr;</a>
       </p>
@@ -55,24 +65,44 @@ layout: layouts/base.njk
 
 <script>
   document.getElementById('invite-btn').addEventListener('click', function () {
+    var btn = document.getElementById('invite-btn');
+    var status = document.getElementById('invite-status');
     var friendEmail = document.getElementById('invite-email').value.trim();
     if (!friendEmail) {
       document.getElementById('invite-email').focus();
       return;
     }
     var personal = document.getElementById('invite-message').value.trim();
-    var subject = 'Join me at the MASCP Pupusa Dinner & 40th Anniversary — August 22';
-    var body = (personal ? personal + '\n\n---\n\n' : '') +
-      'I wanted to invite you to this special event!\n\n' +
-      'MASCP Pupusa Dinner and 40th Anniversary Celebration\n' +
-      'Saturday, August 22 · 5:00–7:30pm\n' +
-      'Aubergine, 1226 Williamson Street, Madison\n\n' +
-      'Featuring a 40 Years of Sistering slideshow, Salvadoran music, and silent auction.\n' +
-      'Sliding scale suggested donation: $4–$40. Everyone welcome!\n\n' +
-      'RSVP here: https://mascp.org/rsvp/\n\n' +
-      'View the invitation: https://mascp.org/assets/images/mascp-invitation.png';
-    window.location.href = 'mailto:' + encodeURIComponent(friendEmail) +
-      '?subject=' + encodeURIComponent(subject) +
-      '&body=' + encodeURIComponent(body);
+
+    btn.disabled = true;
+    status.textContent = 'Sending...';
+    status.className = 'text-center text-sm mt-2 text-mascp-gray';
+
+    fetch('/.netlify/functions/send-invite', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        friendEmail: friendEmail,
+        personalMessage: personal,
+        eventName: 'MASCP Pupusa Dinner and 40th Anniversary Celebration',
+        eventDate: 'Saturday, August 22, 2026',
+        eventTime: '5:00 – 7:30pm',
+        eventVenue: 'Aubergine, 1226 Williamson Street, Madison'
+      })
+    })
+      .then(function (res) { return res.ok ? res.json() : res.json().then(function (d) { throw new Error(d.error || 'Failed to send.'); }); })
+      .then(function () {
+        status.textContent = 'Invitation sent to ' + friendEmail + '!';
+        status.className = 'text-center text-sm mt-2 text-green-700';
+        document.getElementById('invite-email').value = '';
+        document.getElementById('invite-message').value = '';
+      })
+      .catch(function (err) {
+        status.textContent = err.message || 'Something went wrong. Please try again.';
+        status.className = 'text-center text-sm mt-2 text-red-600';
+      })
+      .finally(function () {
+        btn.disabled = false;
+      });
   });
 </script>
