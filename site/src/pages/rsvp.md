@@ -7,4 +7,5 @@ eventDate: Saturday, August 22, 2026
 eventTime: 5:00 – 7:30pm
 eventVenue: Aubergine, 1226 Williamson Street, Madison
 paypalEmail: info@mascp.org
+rsvpClosed: true
 ---

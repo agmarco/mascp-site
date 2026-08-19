@@ -14,6 +14,15 @@ layout: layouts/base.njk
       <div class="border-b-2 border-mascp-terracotta w-24 mx-auto mt-6"></div>
     </div>
 
+    {% if rsvpClosed %}
+    <!-- RSVP closed -->
+    <div class="text-center py-12">
+      <h2 class="text-2xl font-bold text-mascp-terracotta mb-3">RSVPs are closed</h2>
+      <p class="text-mascp-gray text-lg mb-2">We've reached capacity and are no longer accepting reservations for this event.</p>
+      <p class="text-mascp-gray">Thank you to everyone who signed up — we look forward to seeing you there!</p>
+    </div>
+    {% else %}
+
     <!-- RSVP Form -->
     <div id="rsvp-form-wrap">
       <form
@@ -150,6 +159,7 @@ layout: layouts/base.njk
         </div>
       </div>
     </div>
+    {% endif %}
 
     <!-- Accessibility info -->
     <div class="mt-10 pt-6 border-t border-gray-200 text-sm text-mascp-gray text-center">
@@ -160,6 +170,7 @@ layout: layouts/base.njk
   </div>
 </section>
 
+{% if not rsvpClosed %}
 <script>
   (function () {
     var form = document.getElementById('rsvp-form');
@@ -242,3 +253,4 @@ layout: layouts/base.njk
       });
   });
 </script>
+{% endif %}
