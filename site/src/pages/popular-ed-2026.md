@@ -10,7 +10,7 @@ description: "Popular Education workshop for community organizers, led by visiti
 **Sunday, October 5, 2026, 4:00–6:00 PM**
 [Add to Calendar](/assets/popular-ed-2026.ics) · [Google Calendar](https://calendar.google.com/calendar/render?action=TEMPLATE&text=Popular+Education+Workshop&dates=20261005T210000Z/20261005T230000Z&details=Popular+Education+workshop+for+community+organizers%2C+led+by+visiting+Salvadoran+social+movement+leaders.&location=1104+Mound+St%2C+Madison%2C+WI)
 
-[Village Co-Housing Community Room, 1104 Mound St, Madison](https://www.google.com/maps/search/?api=1&query=1104+Mound+St%2C+Madison%2C+WI)
+[Village Co-Housing Community Room, 1104 Mound St, Madison](https://www.google.com/maps/place/Village+Cohousing+Community/@43.0655681,-89.4071654,17z/data=!3m1!4b1!4m6!3m5!1s0x8807acd1c20e0d7d:0x5cf63423b4ad0a30!8m2!3d43.0655642!4d-89.4045851!16s%2Fg%2F11ckkr3n53?entry=ttu&g_ep=EgoyMDI2MDkxNi4wIKXMDSoASAFQAw%3D%3D)
 
 $10 suggested donation
 
