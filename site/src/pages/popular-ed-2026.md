@@ -8,7 +8,9 @@ description: "Popular Education workshop for community organizers, led by visiti
 ## Popular Education Workshop
 
 **Sunday, October 5, 2026, 4:00–6:00 PM**
+
 Village Co-Housing Community Room, 1104 Mound St, Madison
+
 $10 suggested donation
 
 Join us for a Popular Education workshop for community organizers, led by visiting Salvadoran social movement leaders.
@@ -18,8 +20,6 @@ Registration required: [info@mascp.com](mailto:info@mascp.com) or [mascp.org](/)
 <h2 id="info">Info</h2>
 
 ### Solidarity to Strengthen the People's Power
-
-**Description of the workshop:**
 
 Power is built from the ground up, and it starts with our stories. Together, we will learn from each other's personal experiences in organizing, exchanging practical actions, triumphs, and hard-earned lessons that can be adapted and applied directly to our own home communities.
 
@@ -39,8 +39,6 @@ Whether you are a seasoned organizer or just beginning to engage in community ac
 - Build community to resist global struggles.
 
 <h2 id="presenters">Presenters</h2>
-
-*Presented by:*
 
 <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-8 not-prose mt-6">
   <div class="text-center">
