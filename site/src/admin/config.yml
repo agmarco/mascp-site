@@ -73,8 +73,32 @@ collections:
         fields:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/home.njk" }
-          - { label: "Hero Image", name: "heroImage", widget: "image" }
-          - { label: "Hero Image Caption", name: "heroCaption", widget: "string", required: false, hint: "Optional caption shown below the hero image" }
+          - label: "Banners"
+            name: "banners"
+            widget: "list"
+            required: false
+            hint: "Rotating banners shown at the top of the home page"
+            types:
+              - label: "Event Announcement"
+                name: "event"
+                widget: "object"
+                fields:
+                  - { label: "Type", name: "type", widget: "hidden", default: "event" }
+                  - { label: "Logo", name: "logo", widget: "image", required: false, hint: "Small logo shown above the eyebrow text" }
+                  - { label: "Logo Alt Text", name: "logoAlt", widget: "string", required: false }
+                  - { label: "Eyebrow", name: "eyebrow", widget: "string", required: false, hint: "Small text above the title" }
+                  - { label: "Title", name: "title", widget: "string", required: false }
+                  - { label: "Details", name: "details", widget: "text", required: false, hint: "Date, time, location. Use <br> for line breaks" }
+                  - { label: "Link URL", name: "linkUrl", widget: "string", required: false }
+                  - { label: "Link Text", name: "linkText", widget: "string", required: false }
+              - label: "Image"
+                name: "image"
+                widget: "object"
+                fields:
+                  - { label: "Type", name: "type", widget: "hidden", default: "image" }
+                  - { label: "Image", name: "image", widget: "image" }
+                  - { label: "Alt Text", name: "alt", widget: "string", required: false }
+                  - { label: "Link URL", name: "linkUrl", widget: "string", required: false }
           - { label: "Welcome Heading", name: "welcomeHeading", widget: "string", required: false, hint: "Large heading shown above the welcome text" }
           - { label: "Welcome Text", name: "welcome", widget: "text" }
           - { label: "Additional Content", name: "body", widget: "markdown", required: false }

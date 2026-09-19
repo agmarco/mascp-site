@@ -141,28 +141,6 @@ Build a headless browser crawler to:
 
 ---
 
-## Crawler Implementation Plan
-
-### Directory Structure
-```
-/crawler
-  /src
-    index.js          # Main crawler entry
-    scraper.js        # Page content extraction
-    downloader.js     # Asset downloading
-    cleaner.js        # HTML cleanup
-  /output
-    /pages            # Extracted HTML
-    /assets           # Downloaded images/files
-    /data             # JSON metadata
-  package.json
-```
-
-### Key Dependencies
-- puppeteer - Headless browser
-- cheerio - HTML parsing
-- fs-extra - File operations
-
 ---
 
 ## Progress Tracking

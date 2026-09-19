@@ -2,34 +2,81 @@
 layout: layouts/base.njk
 ---
 
-<!-- Featured Image/Flyer -->
-{% if heroImage %}
+<!-- Rotating Banners -->
+{% if banners and banners.length %}
 <section class="py-8 bg-white">
   <div class="max-w-3xl mx-auto px-4">
-    {% if heroLink %}
-    <div class="flex flex-col sm:flex-row gap-3 justify-center mb-6">
-      <a href="{{ heroLink }}" class="btn-primary inline-block text-lg px-8 py-3">RSVP Now &rarr;</a>
-      <a href="/invite/" class="btn-secondary inline-block text-lg px-8 py-3">Invite a Friend</a>
+    <div class="banner-carousel relative overflow-hidden rounded-lg shadow-lg">
+      {% for banner in banners %}
+      <div class="banner-slide {% if loop.first %}is-active{% endif %}" data-index="{{ loop.index0 }}">
+        {% if banner.type == 'image' %}
+          {% if banner.linkUrl %}
+          <a href="{{ banner.linkUrl }}" target="_blank" rel="noopener">
+            <img src="{{ banner.image }}" alt="{{ banner.alt or 'MASCP event banner' }}" class="w-full h-auto">
+          </a>
+          {% else %}
+          <img src="{{ banner.image }}" alt="{{ banner.alt or 'MASCP event banner' }}" class="w-full h-auto">
+          {% endif %}
+        {% else %}
+        <div class="bg-mascp-light px-6 py-10 md:px-12 md:py-14 text-center">
+          {% if banner.logo %}<img src="{{ banner.logo }}" alt="{{ banner.logoAlt or 'U.S.-El Salvador Sister Cities' }}" class="h-16 md:h-20 w-auto mx-auto mb-4">{% endif %}
+          {% if banner.eyebrow %}<p class="text-lg md:text-xl font-heading text-mascp-terracotta mb-2">{{ banner.eyebrow }}</p>{% endif %}
+          {% if banner.title %}<h2 class="text-2xl md:text-3xl font-heading text-mascp-dark mb-4">&ldquo;{{ banner.title }}&rdquo;</h2>{% endif %}
+          {% if banner.details %}<p class="text-lg text-mascp-gray mb-4 leading-relaxed">{{ banner.details | safe }}</p>{% endif %}
+          {% if banner.linkUrl %}
+          <a href="{{ banner.linkUrl }}" target="_blank" rel="noopener" class="btn-primary inline-block">{{ banner.linkText or 'More Info' }}</a>
+          {% endif %}
+        </div>
+        {% endif %}
+      </div>
+      {% endfor %}
     </div>
-    <a href="{{ heroLink }}" aria-label="View invitation and RSVP for the MASCP Pupusa Dinner and 40th Anniversary Celebration">
-      <img src="{{ heroImage }}" alt="Invitation: MASCP Pupusa Dinner and 40th Anniversary Celebration. Saturday, August 22, 5:00 to 7:30pm. Aubergine, 1226 Williamson Street, Madison. Featuring a 40 Years of Sistering slideshow, Salvadoran music, and silent auction. Sliding scale suggested donation $4 to $40. Everyone welcome. Wheelchair accessible." class="w-full h-auto rounded-lg shadow-lg">
-    </a>
-    <p class="sr-only">
-      MASCP Pupusa Dinner and 40th Anniversary Celebration.
-      Saturday, August 22, 5:00 to 7:30pm at Aubergine, 1226 Williamson Street, Madison.
-      Please join us as we joyfully celebrate 40 years of sistering and hear back from our most recent delegations to El Salvador.
-      Featuring a 40 Years of Sistering slideshow, Salvadoran music, and silent auction.
-      Sliding scale suggested donation: $4 to $40. Everyone welcome.
-      Accessibility: Wheelchair accessible. Please allow time for neighborhood street parking. Bike parking across the street. Nearby buses: A, B, C and 38.
-    </p>
-    {% else %}
-    <img src="{{ heroImage }}" alt="Visit Arcatao - Madison's Sister City in El Salvador" class="w-full h-auto rounded-lg shadow-lg">
-    {% endif %}
-    {% if heroCaption %}
-    <p class="text-sm text-mascp-gray text-center mt-3 italic">{{ heroCaption }}</p>
+    {% if banners.length > 1 %}
+    <div class="flex justify-center gap-2 mt-4">
+      {% for banner in banners %}
+      <button type="button" class="banner-dot w-2.5 h-2.5 rounded-full bg-mascp-gray/40 {% if loop.first %}is-active{% endif %}" data-index="{{ loop.index0 }}" aria-label="Show banner {{ loop.index }}"></button>
+      {% endfor %}
+    </div>
     {% endif %}
   </div>
 </section>
+
+<style>
+  .banner-slide { display: none; }
+  .banner-slide.is-active { display: block; animation: mascp-banner-fade 0.5s ease; }
+  .banner-dot.is-active { background-color: #C4533A; }
+  @keyframes mascp-banner-fade { from { opacity: 0; } to { opacity: 1; } }
+</style>
+{% if banners.length > 1 %}
+<script>
+  (function () {
+    var slides = document.querySelectorAll('.banner-slide');
+    var dots = document.querySelectorAll('.banner-dot');
+    var current = 0;
+    var timer;
+
+    function show(index) {
+      current = index;
+      slides.forEach(function (slide, i) { slide.classList.toggle('is-active', i === index); });
+      dots.forEach(function (dot, i) { dot.classList.toggle('is-active', i === index); });
+    }
+
+    function startTimer() {
+      timer = setInterval(function () { show((current + 1) % slides.length); }, 7000);
+    }
+
+    dots.forEach(function (dot) {
+      dot.addEventListener('click', function () {
+        clearInterval(timer);
+        show(parseInt(dot.getAttribute('data-index'), 10));
+        startTimer();
+      });
+    });
+
+    startTimer();
+  })();
+</script>
+{% endif %}
 {% endif %}
 
 <!-- Welcome Section -->
