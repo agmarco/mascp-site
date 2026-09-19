@@ -99,6 +99,14 @@ collections:
                   - { label: "Image", name: "image", widget: "image" }
                   - { label: "Alt Text", name: "alt", widget: "string", required: false }
                   - { label: "Link URL", name: "linkUrl", widget: "string", required: false }
+                  - label: "Buttons"
+                    name: "links"
+                    widget: "list"
+                    required: false
+                    hint: "Optional buttons shown below the image (e.g. More Info, Meet Our Presenters)"
+                    fields:
+                      - { label: "Label", name: "label", widget: "string" }
+                      - { label: "URL", name: "url", widget: "string" }
           - { label: "Welcome Heading", name: "welcomeHeading", widget: "string", required: false, hint: "Large heading shown above the welcome text" }
           - { label: "Welcome Text", name: "welcome", widget: "text" }
           - { label: "Additional Content", name: "body", widget: "markdown", required: false }

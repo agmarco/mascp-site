@@ -11,11 +11,18 @@ layout: layouts/base.njk
       <div class="banner-slide {% if loop.first %}is-active{% endif %}" data-index="{{ loop.index0 }}">
         {% if banner.type == 'image' %}
           {% if banner.linkUrl %}
-          <a href="{{ banner.linkUrl }}" target="_blank" rel="noopener">
+          <a href="{{ banner.linkUrl }}"{% if banner.linkUrl.startsWith('http') %} target="_blank" rel="noopener"{% endif %}>
             <img src="{{ banner.image }}" alt="{{ banner.alt or 'MASCP event banner' }}" class="w-full h-auto">
           </a>
           {% else %}
           <img src="{{ banner.image }}" alt="{{ banner.alt or 'MASCP event banner' }}" class="w-full h-auto">
+          {% endif %}
+          {% if banner.links and banner.links.length %}
+          <div class="flex flex-col sm:flex-row gap-3 justify-center py-5 px-6 bg-mascp-light">
+            {% for link in banner.links %}
+            <a href="{{ link.url }}" class="btn-primary inline-block text-center">{{ link.label }}</a>
+            {% endfor %}
+          </div>
           {% endif %}
         {% else %}
         <div class="bg-mascp-light px-6 py-10 md:px-12 md:py-14 text-center">
