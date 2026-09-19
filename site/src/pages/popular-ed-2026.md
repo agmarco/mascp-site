@@ -8,14 +8,15 @@ description: "Popular Education workshop for community organizers, led by visiti
 ## Popular Education Workshop
 
 **Sunday, October 5, 2026, 4:00–6:00 PM**
+[Add to Calendar](/assets/popular-ed-2026.ics) · [Google Calendar](https://calendar.google.com/calendar/render?action=TEMPLATE&text=Popular+Education+Workshop&dates=20261005T210000Z/20261005T230000Z&details=Popular+Education+workshop+for+community+organizers%2C+led+by+visiting+Salvadoran+social+movement+leaders.&location=1104+Mound+St%2C+Madison%2C+WI)
 
-Village Co-Housing Community Room, 1104 Mound St, Madison
+[Village Co-Housing Community Room, 1104 Mound St, Madison](https://www.google.com/maps/search/?api=1&query=1104+Mound+St%2C+Madison%2C+WI)
 
 $10 suggested donation
 
 Join us for a Popular Education workshop for community organizers, led by visiting Salvadoran social movement leaders.
 
-Registration required: [info@mascp.com](mailto:info@mascp.com) or [mascp.org](/)
+Registration required: [info@mascp.com](mailto:info@mascp.com)
 
 <h2 id="info">Info</h2>
 

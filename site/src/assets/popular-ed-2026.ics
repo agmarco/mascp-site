@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//MASCP//Popular Education Workshop 2026//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:popular-ed-2026@mascp.org
+DTSTAMP:20260919T000000Z
+DTSTART:20261005T210000Z
+DTEND:20261005T230000Z
+SUMMARY:Popular Education Workshop
+DESCRIPTION:Popular Education workshop for community organizers\, led by visiting Salvadoran social movement leaders. $10 suggested donation. Registration required: info@mascp.com
+LOCATION:Village Co-Housing Community Room\, 1104 Mound St\, Madison\, WI
+URL:https://www.mascp.org/popular-ed-2026/
+END:VEVENT
+END:VCALENDAR
