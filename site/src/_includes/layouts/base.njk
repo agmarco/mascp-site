@@ -56,6 +56,8 @@
             </li>
             {% elif item.label == "Donate" %}
             <li><a href="{{ item.url }}" class="nav-link bg-mascp-terracotta text-white rounded {% if item.url in page.url %}bg-mascp-red{% endif %}">{{ item.label }}</a></li>
+            {% elif item.style == "highlight" %}
+            <li><a href="{{ item.url }}" class="nav-link nav-link-highlight {% if item.url in page.url %}active{% endif %}">{% if item.icon %}{% include "icons/" + item.icon + ".svg" %}{% endif %}{{ item.label }}</a></li>
             {% else %}
             <li><a href="{{ item.url }}" class="nav-link {% if item.url == page.url or (item.url != '/' and item.url in page.url) %}active{% endif %}">{{ item.label }}</a></li>
             {% endif %}

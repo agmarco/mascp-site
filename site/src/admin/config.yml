@@ -140,6 +140,8 @@ collections:
             fields:
               - { label: "Label", name: "label", widget: "string" }
               - { label: "URL", name: "url", widget: "string" }
+              - { label: "Style", name: "style", widget: "select", options: ["highlight"], required: false, hint: "Highlight shows the entry in bold red" }
+              - { label: "Icon", name: "icon", widget: "select", options: ["unlink"], required: false, hint: "Only shown when Style is highlight" }
               - name: "children"
                 label: "Dropdown Items"
                 widget: "list"

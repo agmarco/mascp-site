@@ -1,5 +1,6 @@
 {
   "main": [
+    { "label": "Free Ruth & Fidel", "url": "/political-prisoners/", "icon": "unlink", "style": "highlight" },
     { "label": "Home", "url": "/" },
     { "label": "About", "url": "/about/" },
     { "label": "History", "url": "/history/" },
