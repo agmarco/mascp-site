@@ -109,6 +109,24 @@ collections:
                       - { label: "URL", name: "url", widget: "string" }
           - { label: "Welcome Heading", name: "welcomeHeading", widget: "string", required: false, hint: "Large heading shown above the welcome text" }
           - { label: "Welcome Text", name: "welcome", widget: "text" }
+          - label: "Solidarity Callout"
+            name: "solidarity"
+            widget: "object"
+            required: false
+            hint: "Highlighted card shown below the welcome text"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Text", name: "text", widget: "text" }
+              - { label: "Link URL", name: "linkUrl", widget: "string", required: false }
+              - { label: "Link Text", name: "linkText", widget: "string", required: false }
+              - label: "Photos"
+                name: "images"
+                widget: "list"
+                required: false
+                fields:
+                  - { label: "Image", name: "image", widget: "image" }
+                  - { label: "Alt Text", name: "alt", widget: "string" }
+                  - { label: "Crop Position", name: "position", widget: "string", required: false, hint: "Optional, e.g. 52% 25% to center a face in a wide photo" }
           - { label: "Additional Content", name: "body", widget: "markdown", required: false }
 
   # Events

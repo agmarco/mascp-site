@@ -38,7 +38,7 @@ Fidel Zavala is a human rights defender and spokesperson for the Human and Commu
 
 On February 25, 2025, authorities raided UNIDEHC's headquarters and arrested Zavala, along with more than 20 community leaders defending their land from eviction in the La Floresta community. His arrest came shortly after he publicly denounced earlier arrests in La Floresta. He has since faced at least four separate criminal proceedings, including the reopening of a case in which he had already been acquitted. Three of those ended in acquittal or were closed without a conviction.
 
-Zavala remains in pretrial detention on charges of criminal association and illegal land sales. In April 2025 he was transferred to Mariona prison, where he is held by the same guards he had accused of torture, putting his life and safety at serious risk. In September 2026, a court extended the investigation phase of his case until August 2027, meaning he could spend well over two years in prison without a trial.
+Zavala remains in pretrial detention on charges of criminal association and illegal land sales. In April 2025 he was transferred to Mariona prison, where he was held by the same guards he had accused of torture. After a court appearance on April 10, 2025, he was not returned there, and the court has since had to request information about where he is being held. In September 2026, a court extended the investigation phase of his case until August 25, 2027, meaning he could spend around two and a half years in prison without a trial.
 
 We join Amnesty International and partner organizations in calling for an end to Fidel Zavala's prolonged pretrial detention, guarantees for his safety, and an end to the use of the courts to punish legitimate human rights work.
 
@@ -46,7 +46,7 @@ We join Amnesty International and partner organizations in calling for an end to
 
 - **Share their stories.** Talk about Ruth and Fidel with your friends, faith communities, and networks, and share this page on social media.
 - **Contact your representatives.** Ask your members of Congress to press the State Department to call for their release.
-- **Join Amnesty International's urgent actions** for [Fidel Zavala](https://www.amnestyusa.org/urgent-actions/el-salvador-defender-in-prolonged-pre-trial-detention/).
+- **Write for Fidel Zavala.** Amnesty International's [urgent action](https://www.amnesty.org/en/documents/amr29/1479/2026/en/) (open until August 25, 2027) includes a model letter. Send your appeal to El Salvador's Attorney General at [prensafgr@fgr.gob.sv](mailto:prensafgr@fgr.gob.sv), in Spanish or English.
 - **Stay connected.** [Get involved with MASCP](/get-involved/) to hear about upcoming solidarity actions.
 
 <h2 id="learn-more">Learn More</h2>

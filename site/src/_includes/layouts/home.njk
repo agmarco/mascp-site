@@ -97,6 +97,28 @@ layout: layouts/base.njk
   <a href="/contact/" class="btn-primary inline-block mt-8">Contact Us For More Info</a>
 </section>
 
+<!-- Solidarity Callout -->
+{% if solidarity %}
+<section class="max-w-4xl mx-auto px-4 pb-16">
+  <div class="bg-yellow-50 border-2 border-yellow-300 rounded-lg px-6 py-8 md:px-10 flex flex-col md:flex-row items-center gap-8">
+    {% if solidarity.images and solidarity.images.length %}
+    <div class="flex shrink-0 -space-x-4">
+      {% for img in solidarity.images %}
+      <img src="{{ img.image }}" alt="{{ img.alt }}" class="w-28 h-28 rounded-full object-cover border-4 border-white shadow"{% if img.position %} style="object-position: {{ img.position }};"{% endif %}>
+      {% endfor %}
+    </div>
+    {% endif %}
+    <div class="text-center md:text-left">
+      <h2 class="text-2xl font-heading text-mascp-red mb-3">{{ solidarity.heading }}</h2>
+      <p class="text-mascp-gray leading-relaxed">{{ solidarity.text }}</p>
+      {% if solidarity.linkUrl %}
+      <a href="{{ solidarity.linkUrl }}" class="btn-primary inline-block mt-5">{{ solidarity.linkText or 'Learn More' }}</a>
+      {% endif %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
 <!-- Additional content -->
 {{ content | safe }}
 
